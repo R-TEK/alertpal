@@ -3,6 +3,27 @@
  * v1.0.0
  */
 
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 0.5;
+	}
+}
+
+@keyframes popUp {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.05);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
 #alerts {
 	display: none;
 }
@@ -13,8 +34,10 @@
 	height: 100%;
 	top: 0;
 	left: 0;
-	background-color: rgba(0, 0, 0, 0.8);
-	z-index: 10;
+	background-color: #000;
+	opacity: 0.5;
+	z-index: 98;
+	animation: fadeIn ease 0.2s;
 }
 
 #alerts_box {
@@ -31,7 +54,8 @@
 	box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);
 	overflow-y: auto;
 	overflow-x: hidden;
-	z-index: 11;
+	z-index: 99;
+	animation: popUp ease 0.2s;
 }
 
 #alerts_title {

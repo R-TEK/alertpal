@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="../build/alertpal.css" />
+	</head>
+	<body>
+		<h1>JavaScript Alerts</h1>
+		<p>Define the title of the alert (character count should be limited)</p>
+		<input id="title" type="text" value="Alerts Title" style="width: 500px;" />
+		<p>
+			Define the description of the alert, you can use HTML to structure and change the look
+			of the description (can be as long as needed)
+		</p>
+		<textarea id="description" value="Alerts Description" style="width: 500px; height: 300px;">
+Alerts Description</textarea
+		>
+		<br />
+		<button onclick="notification()" style="font-size: 18px;">Alert</button>
+		<button onclick="confirmAction()" style="font-size: 18px;">Confirm</button>
+		<script type="text/javascript" src="../build/alertpal.js"></script>
+		<script type="text/javascript">
+			// Notification style alert
+			function notification() {
+				// Defining the users text inputs
+				let titleInput = document.getElementById('title').value;
+				let descriptionInput = document.getElementById('description').value;
+
+				// Calling the alerts function to bring it up
+				requestAlert(titleInput, descriptionInput);
+			}
+
+			// Action confirmation style alert
+			function confirmAction() {
+				// Defining the users text inputs
+				let titleInput = document.getElementById('title').value;
+				let descriptionInput = document.getElementById('description').value;
+
+				// Calling the alerts function to bring it up
+				requestAlert(titleInput, descriptionInput, function () {
+					window.alert('Action Confirmed!');
+				});
+			}
+		</script>
+	</body>
+	<html></html>
+</html>
