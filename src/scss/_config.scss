@@ -1,0 +1,34 @@
+/*
+ * Variables
+ */
+
+// Colors
+$primary_color: #1c84b6;
+$success: #1aad47;
+$warn: #fc0;
+$error: #b52b30;
+$dark-text: #111;
+$light-text: #555;
+$shadow: 0 0 10px 0 rgba(1, 1, 1, 0.2);
+
+// Fonts
+$font: Arial, Helvetica, sans-serif;
+
+// Effects
+$quickTransition: all 0.2s;
+
+// Misc
+$hoverEnlarge: scale(1.1);
+
+/*
+ * Mixins
+ */
+
+// User-select for different browsers
+@mixin no-select {
+	user-select: none;
+	-webkit-user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+}

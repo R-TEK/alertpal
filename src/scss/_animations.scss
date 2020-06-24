@@ -1,0 +1,25 @@
+/*
+ * Animations
+ */
+// Fade in
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 0.5;
+	}
+}
+
+// Animation to resemble it popping up and back down, like a jump effect
+@keyframes popUp {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.05);
+	}
+	100% {
+		transform: scale(1);
+	}
+}

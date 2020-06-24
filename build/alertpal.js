@@ -3,23 +3,14 @@
  * v1.0.0
  */
 
+// Defining Alertpal objects
+let Alertpal = new Object();
+
+/*
 // Function to create the HTML and append it to the DOM
 (function () {
 	// InnerHTML content
 	const HTMLContent = `
-	<div id="alerts_bg"></div>
-	<div id="alerts_box">
-		<header id="alerts_header">
-			<h2 id="alerts_title"></h2>
-		</header>
-		<div id="alerts_body">
-			<p id="alerts_description"></p>
-			<div id="alerts_button">
-				<button id="alerts_cancel">Cancel</button>
-				<button id="alerts_accept">Accept</button>
-			</div>
-		</div>
-	</alerts>
 	`;
 
 	// Creating the node to store the innerHTML
@@ -30,56 +21,31 @@
 	// Appending to the DOM
 	document.getElementsByTagName('BODY')[0].appendChild(HTMLWrapper);
 })();
+*/
 
-// Function to open and configure an alert box
-let requestAlert = function (title, description, acceptRequest) {
+// Function to close the alert - then setting some element to have this as a click handler
+function closeAlert() {
+	// Hiding the alert
+	document.getElementById('alertpal_alert').style.display = 'none';
+	document.getElementById('alertpal_bg').style.display = 'none';
+}
+document.getElementById('alertpal_bg').addEventListener('click', closeAlert);
+document.getElementById('ap_cancel').addEventListener('click', closeAlert);
+
+// Function to open and configure the alert Alertpal
+Alertpal.alert = function (details) {
 	// Defining HTML elements
-	const alerts = document.getElementById('alerts');
-	const titleElem = document.getElementById("alerts_title");
-	const descElem = document.getElementById('alerts_description');
-	const cancelElem = document.getElementById('alerts_cancel');
-	const acceptElem = document.getElementById('alerts_accept');
-
-	// Showing the alerts box
-	alerts.style.display = 'block';
-
-	// Resetting the elements
-	cancelElem.innerHTML = "Cancel";
-	acceptElem.innerHTML = "OK";
-	acceptElem.style.display = 'inline-block';
+	const title = document.getElementById('ap_title');
+	const desc = document.getElementById('ap_description');
+	const cancel = document.getElementById('ap_cancel');
 
 	// Setting the title and description text
-	titleElem.innerText = title;
-	descElem.innerHTML = description;
+	title.innerText = details.title === undefined ? 'Alert' : details.title;
+	desc.innerHTML = details.description === undefined ? '' : details.description;
+	cancel.innerHTML = details.cancel === undefined ? 'Cancel' : details.cancel;
 
-	// Checking if the alert should be a regular alert or confirm alert
-	if (acceptRequest !== undefined) {
-		// Applying the given function to the accept button
-		acceptElem.onclick = function () {
-			acceptRequest();
-			// Hiding the alerts box
-			alerts.style.display = 'none';
-		}
-
-		// Cancel button should hide the alerts box
-		cancelElem.onclick = function () {
-			alerts.style.display = 'none';
-		}
-	}
-	else {
-		// Applying text to button when its a regular alert
-		acceptElem.style.display = "none";
-		cancelElem.innerHTML = "OK";
-
-		// Cancel button should hide the alerts box
-		cancelElem.onclick = function () {
-			alerts.style.display = 'none';
-		}
-	}
-}
-
-// Assigning a click event to the dark bg to close/cancel the alert
-document.getElementById('alerts_bg').addEventListener('click', function () {
-	// Hiding the alert
-	document.getElementById('alerts').style.display = 'none';
-});
+	// Showing/Hiding elements
+	document.getElementById('alertpal_alert').style.display = 'block';
+	document.getElementById('alertpal_bg').style.display = 'block';
+	document.getElementById('ap_ok').style.display = 'none';
+};
