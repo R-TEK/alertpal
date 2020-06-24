@@ -15,8 +15,8 @@
 Alerts Description</textarea
 		>
 		<br />
-		<button onclick="notification()" style="font-size: 18px;">Alert</button>
-		<button onclick="confirmAction()" style="font-size: 18px;">Confirm</button>
+		<button onclick="alert()" style="font-size: 18px;">Alert</button>
+		<button onclick="confirm()" style="font-size: 18px;">Confirm</button>
 		<div id="alertpal">
 			<div id="alertpal_bg"></div>
 			<aside id="alertpal_alert">
@@ -37,11 +37,30 @@ Alerts Description</textarea
 		</div>
 		<script type="text/javascript" src="../build/alertpal.js"></script>
 		<script type="text/javascript">
-			// Notification style alert
-			function notification() {}
+			// Alert style
+			function alert() {
+				const config = {
+					title: 'This is an alert',
+					description: 'Add optional description'
+				};
 
-			// Action confirmation style alert
-			function confirmAction() {}
+				Alertpal.alert(config);
+			}
+
+			// Confirm style
+			function confirm() {
+				const config = {
+					title: 'This is a confirm dialogue',
+					description: 'Do you accept?',
+					cancel: 'I do not Accept',
+					ok: 'I Accept',
+					callback: function () {
+						Alertpal.alert({ title: 'You have accepted', cancel: 'Return' });
+					}
+				};
+
+				Alertpal.confirm(config);
+			}
 		</script>
 	</body>
 	<html></html>
