@@ -32,7 +32,6 @@ function closeAlert() {
 document.getElementById('alertpal_bg').addEventListener('click', closeAlert);
 document.getElementById('ap_cancel').addEventListener('click', closeAlert);
 
-// Function to open and configure the alert Alertpal
 Alertpal.alert = function (details) {
 	// Defining HTML elements
 	const title = document.getElementById('ap_title');
@@ -55,10 +54,64 @@ Alertpal.alert = function (details) {
 	document.getElementById('alertpal_bg').style.display = 'block';
 };
 
-// Function to open and configure the confirm Alertpal
 Alertpal.confirm = function (details) {
 	// For confirm, since its similar to regular alert, I reuse that function
 	// The alert function is slightly modified to check for a callback
 	// If there is not callback then it knows that its not a confirm but an alert, vice versa
 	Alertpal.alert(details);
+};
+
+Alertpal.message = function (type, details) {
+	// Defining container and element
+	const container = document.getElementById('alertpal_message_container');
+	const messageNode = document.createElement('p');
+	messageNode.setAttribute('class', 'ap_message');
+
+	// Configuration
+	const timeout = details.timeout === undefined ? 5000 : details.timeout;
+	messageNode.innerHTML = details.message === undefined ? 'Message' : details.message;
+	messageNode.onclick =
+		details.callback === undefined
+			? (messageNode.onclick = function () {
+					messageNode.style.transform = 'translate(285px, 0px)';
+					setTimeout(function () {
+						messageNode.style.display = 'none';
+					}, 300);
+			  })
+			: (messageNode.onclick = details.callback);
+
+	// Checking the type of message and assigning a CSS class to have style match it function
+	switch (type) {
+		case 'success':
+			messageNode.className += ' success';
+			break;
+		case 'warn':
+			messageNode.className += ' warn';
+			break;
+		case 'error':
+			messageNode.className += ' error';
+			break;
+		default:
+			messageNode.className += ' normal';
+			break;
+	}
+
+	// Timeout to trigger the message sliding away
+	setTimeout(function () {
+		messageNode.style.transform = 'translate(285px, 0px)';
+	}, timeout);
+
+	// Timeout to trigger the removal of the element in the DOM
+	setTimeout(function () {
+		container.removeChild(messageNode);
+	}, timeout + 200);
+
+	// Checking whether to append or insertBefore
+	if (container.children.length < 1) {
+		// If there is no children in the container, I append
+		container.appendChild(messageNode);
+	} else {
+		// If there is children in the container, I insert at the top
+		container.insertBefore(messageNode, container.children[0]);
+	}
 };

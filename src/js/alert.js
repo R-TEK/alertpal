@@ -1,4 +1,3 @@
-// Function to open and configure the alert Alertpal
 Alertpal.alert = function (details) {
 	// Defining HTML elements
 	const title = document.getElementById('ap_title');

@@ -5,18 +5,13 @@
 	</head>
 	<body>
 		<h1>JavaScript Alerts</h1>
-		<p>Define the title of the alert (character count should be limited)</p>
-		<input id="title" type="text" value="Alerts Title" style="width: 500px;" />
-		<p>
-			Define the description of the alert, you can use HTML to structure and change the look
-			of the description (can be as long as needed)
-		</p>
-		<textarea id="description" value="Alerts Description" style="width: 500px; height: 300px;">
-Alerts Description</textarea
-		>
 		<br />
 		<button onclick="alert()" style="font-size: 18px;">Alert</button>
 		<button onclick="confirm()" style="font-size: 18px;">Confirm</button>
+		<button onclick="normal()" style="font-size: 18px;">Normal</button>
+		<button onclick="success()" style="font-size: 18px;">Success</button>
+		<button onclick="warn()" style="font-size: 18px;">Warn</button>
+		<button onclick="error()" style="font-size: 18px;">Error</button>
 		<div id="alertpal">
 			<div id="alertpal_bg"></div>
 			<aside id="alertpal_alert">
@@ -31,9 +26,7 @@ Alerts Description</textarea
 					</div>
 				</div>
 			</aside>
-			<aside id="alertpal_message">
-				<p id="ap_text"></p>
-			</aside>
+			<aside id="alertpal_message_container"></aside>
 		</div>
 		<script type="text/javascript" src="../build/alertpal.js"></script>
 		<script type="text/javascript">
@@ -60,6 +53,48 @@ Alerts Description</textarea
 				};
 
 				Alertpal.confirm(config);
+			}
+
+			// Default message
+			function normal() {
+				const config = {
+					message: 'Normal'
+				};
+
+				Alertpal.message('default', config);
+			}
+
+			// Success message
+			function success() {
+				const config = {
+					message: 'Success'
+				};
+
+				Alertpal.message('success', config);
+			}
+
+			// Warn message
+			function warn() {
+				const config = {
+					message: 'Warning! Click for more info.',
+					callback: function () {
+						Alertpal.alert({
+							title: 'Warning details',
+							description: 'blah balah balahif vergnogm gomgoremg merg omoregm'
+						});
+					}
+				};
+
+				Alertpal.message('warn', config);
+			}
+
+			// Error message
+			function error() {
+				const config = {
+					title: 'There has been and error'
+				};
+
+				Alertpal.message('error', config);
 			}
 		</script>
 	</body>

@@ -82,4 +82,46 @@
 	#ap_ok:hover {
 		background-color: darken($primary-color, 10%);
 	}
+
+	#alertpal_message_container {
+		position: fixed;
+		top: 0;
+		right: 0;
+	}
+
+	.ap_message {
+		position: relative;
+		margin: 5px 5px 10px 5px;
+		padding: 15px 15px;
+		width: 250px;
+		border-radius: 2px;
+		box-shadow: $shadow;
+		font-family: Arial;
+		font-size: 16px;
+		text-align: center;
+		transition: $quickTransition;
+		overflow-wrap: break-word;
+		animation: rollDown ease 0.3s;
+		cursor: pointer;
+		@include no-select;
+	}
+
+	.success {
+		background-color: $success;
+		color: #fff;
+	}
+
+	.warn {
+		background-color: $warn;
+		color: $dark-text;
+	}
+
+	.error {
+		background-color: $error;
+		color: #fff;
+	}
+
+	.normal {
+		color: $dark-text;
+	}
 }

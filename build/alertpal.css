@@ -25,6 +25,14 @@
   100% {
     transform: scale(1); } }
 
+@keyframes rollDown {
+  0% {
+    transform: translate(0, -55px);
+    transform: rotateX(45deg); }
+  100% {
+    transform: translate(0, 0);
+    transform: rotateX(0deg); } }
+
 #alertpal #alertpal_bg {
   display: none;
   position: fixed;
@@ -91,3 +99,43 @@
 
 #alertpal #ap_ok:hover {
   background-color: #15648a; }
+
+#alertpal #alertpal_message_container {
+  position: fixed;
+  top: 0;
+  right: 0; }
+
+#alertpal .ap_message {
+  position: relative;
+  margin: 5px 5px 10px 5px;
+  padding: 15px 15px;
+  width: 250px;
+  border-radius: 2px;
+  box-shadow: 0 0 10px 0 rgba(1, 1, 1, 0.2);
+  font-family: Arial;
+  font-size: 16px;
+  text-align: center;
+  transition: all 0.2s;
+  overflow-wrap: break-word;
+  animation: rollDown ease 0.3s;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none; }
+
+#alertpal .success {
+  background-color: #1aad47;
+  color: #fff; }
+
+#alertpal .warn {
+  background-color: #fc0;
+  color: #111; }
+
+#alertpal .error {
+  background-color: #b52b30;
+  color: #fff; }
+
+#alertpal .normal {
+  color: #111; }
