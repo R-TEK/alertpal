@@ -8,6 +8,7 @@
 		<br />
 		<button onclick="alert()" style="font-size: 18px;">Alert</button>
 		<button onclick="confirm()" style="font-size: 18px;">Confirm</button>
+		<button onclick="modal()" style="font-size: 18px;">Modal</button>
 		<button onclick="normal()" style="font-size: 18px;">Normal</button>
 		<button onclick="success()" style="font-size: 18px;">Success</button>
 		<button onclick="warn()" style="font-size: 18px;">Warn</button>
@@ -55,6 +56,23 @@
 				Alertpal.confirm(config);
 			}
 
+			// Modal box
+			function modal() {
+				console.log('ewfewfwef');
+				const config = {
+					title: 'Terms and conditions',
+					description:
+						'rules and rules and Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee',
+					ok: 'Agree',
+					cancel: 'Disagree',
+					callback: function () {
+						Alertpal.alert({ title: 'You have accepted' });
+					}
+				};
+
+				Alertpal.modal(config);
+			}
+
 			// Default message
 			function normal() {
 				const config = {
@@ -91,7 +109,7 @@
 			// Error message
 			function error() {
 				const config = {
-					title: 'There has been and error'
+					message: 'There has been and error'
 				};
 
 				Alertpal.message('error', config);

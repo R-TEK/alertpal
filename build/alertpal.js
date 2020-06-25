@@ -1,8 +1,3 @@
-/*!
- * Alerts
- * v1.0.0
- */
-
 // Defining Alertpal objects
 let Alertpal = new Object();
 
@@ -28,6 +23,8 @@ function closeAlert() {
 	// Hiding the alert
 	document.getElementById('alertpal_alert').style.display = 'none';
 	document.getElementById('alertpal_bg').style.display = 'none';
+	// Removing potential modal CSS class
+	document.getElementById('alertpal_alert').removeAttribute('class');
 }
 document.getElementById('alertpal_bg').addEventListener('click', closeAlert);
 document.getElementById('ap_cancel').addEventListener('click', closeAlert);
@@ -114,4 +111,14 @@ Alertpal.message = function (type, details) {
 		// If there is children in the container, I insert at the top
 		container.insertBefore(messageNode, container.children[0]);
 	}
+};
+
+Alertpal.modal = function (details) {
+	// Applying the modal CSS class to the change the alerts style to suit a modal
+	document.getElementById('alertpal_alert').setAttribute('class', 'alertpal_modal');
+
+	// Calling alert alertpal
+	// Similar to the confirm dialogue, the modal shares attributes with the regular alert
+	// So Im reusing the function
+	Alertpal.alert(details);
 };

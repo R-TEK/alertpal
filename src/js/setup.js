@@ -1,8 +1,3 @@
-/*!
- * Alerts
- * v1.0.0
- */
-
 // Defining Alertpal objects
 let Alertpal = new Object();
 
@@ -28,6 +23,8 @@ function closeAlert() {
 	// Hiding the alert
 	document.getElementById('alertpal_alert').style.display = 'none';
 	document.getElementById('alertpal_bg').style.display = 'none';
+	// Removing potential modal CSS class
+	document.getElementById('alertpal_alert').removeAttribute('class');
 }
 document.getElementById('alertpal_bg').addEventListener('click', closeAlert);
 document.getElementById('ap_cancel').addEventListener('click', closeAlert);

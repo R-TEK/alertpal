@@ -1,8 +1,3 @@
-/*!
- * Alerts
- * v1.0.0
- */
-
 @import 'config';
 @import 'animations';
 
@@ -38,6 +33,13 @@
 		animation: popUp ease 0.2s;
 	}
 
+	.alertpal_modal {
+		width: 80% !important;
+		max-height: 80% !important;
+		left: 10% !important;
+		top: 10% !important;
+	}
+
 	#ap_title {
 		margin: 0;
 		font-family: $font;
@@ -58,6 +60,7 @@
 
 	#ap_cancel,
 	#ap_ok {
+		margin: 2px 0;
 		padding: 7px 10px;
 		background-color: #1c84b6;
 		border-radius: 2px;
@@ -122,6 +125,7 @@
 	}
 
 	.normal {
+		background-color: $light-grey;
 		color: $dark-text;
 	}
 }
