@@ -1,5 +1,10 @@
 <!DOCTYPE html>
 <html>
+	<!--
+
+		TESTING PURPOSES ONLY - NOT FOR PRODUCTION
+
+	-->
 	<head>
 		<link rel="stylesheet" type="text/css" href="../build/alertpal.css" />
 	</head>
@@ -13,22 +18,6 @@
 		<button onclick="success()" style="font-size: 18px;">Success</button>
 		<button onclick="warn()" style="font-size: 18px;">Warn</button>
 		<button onclick="error()" style="font-size: 18px;">Error</button>
-		<div id="alertpal">
-			<div id="alertpal_bg"></div>
-			<aside id="alertpal_alert">
-				<header id="ap_header">
-					<h2 id="ap_title"></h2>
-				</header>
-				<div id="ap_body">
-					<p id="ap_description"></p>
-					<div id="ap_buttons">
-						<button id="ap_cancel"></button>
-						<button id="ap_ok"></button>
-					</div>
-				</div>
-			</aside>
-			<aside id="alertpal_message_container"></aside>
-		</div>
 		<script type="text/javascript" src="../build/alertpal.js"></script>
 		<script type="text/javascript">
 			// Alert style
@@ -91,16 +80,18 @@
 				Alertpal.message('success', config);
 			}
 
+			function makeAlert() {
+				Alertpal.alert({
+					title: 'Warning details',
+					description: 'blah balah balahif vergnogm gomgoremg merg omoregm'
+				});
+			}
+
 			// Warn message
 			function warn() {
 				const config = {
 					message: 'Warning! Click for more info.',
-					callback: function () {
-						Alertpal.alert({
-							title: 'Warning details',
-							description: 'blah balah balahif vergnogm gomgoremg merg omoregm'
-						});
-					}
+					callback: makeAlert
 				};
 
 				Alertpal.message('warn', config);

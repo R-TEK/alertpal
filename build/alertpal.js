@@ -1,24 +1,54 @@
-// Defining Alertpal objects
+/**
+ * Creation of the Alertpal Object
+ *
+ * @namespace Alertpal
+ * @type {object}
+ */
 let Alertpal = new Object();
 
-/*
-// Function to create the HTML and append it to the DOM
-(function () {
+/**
+ * Set up function to execute as soon as the DOM has loaded - the function set up the DOM with the require elements and assigns function to events
+ *
+ * @listens DOMContentLoaded
+ * @callback setUp
+ */
+document.addEventListener('DOMContentLoaded', function () {
 	// InnerHTML content
 	const HTMLContent = `
+		<div id="alertpal_bg"></div>
+		<aside id="alertpal_alert">
+			<header id="ap_header">
+				<h2 id="ap_title"></h2>
+			</header>
+			<div id="ap_body">
+				<p id="ap_description"></p>
+				<div id="ap_buttons">
+					<button id="ap_cancel"></button>
+					<button id="ap_ok"></button>
+				</div>
+			</div>
+		</aside>
+		<aside id="alertpal_message_container"></aside>
 	`;
 
-	// Creating the node to store the innerHTML
+	// Creating the node to store the child nodes
 	let HTMLWrapper = document.createElement('SECTION');
-	HTMLWrapper.id = 'alerts';
+	HTMLWrapper.id = 'alertpal';
 	HTMLWrapper.innerHTML = HTMLContent;
 
 	// Appending to the DOM
 	document.getElementsByTagName('BODY')[0].appendChild(HTMLWrapper);
-})();
-*/
 
-// Function to close the alert - then setting some element to have this as a click handler
+	// Defining some event listeners
+	document.getElementById('alertpal_bg').addEventListener('click', closeAlert);
+	document.getElementById('ap_cancel').addEventListener('click', closeAlert);
+});
+
+/**
+ * Function to close an alert / confirm / modal boxes
+ *
+ * @function
+ */
 function closeAlert() {
 	// Hiding the alert
 	document.getElementById('alertpal_alert').style.display = 'none';
@@ -26,9 +56,26 @@ function closeAlert() {
 	// Removing potential modal CSS class
 	document.getElementById('alertpal_alert').removeAttribute('class');
 }
-document.getElementById('alertpal_bg').addEventListener('click', closeAlert);
-document.getElementById('ap_cancel').addEventListener('click', closeAlert);
 
+/**
+ * Function to configure and display the 'alert' style Alertpal
+ *
+ * @memberof Alertpal
+ * @method alert
+ * @param {object} [details] - Object to define the configuration of the alert (Optional - details of defaults below)
+ * @param {string} [details.title] - The title of the alert (Optional - default is 'Alert')
+ * @param {string} [details.description] - The description of the alert. String can also include HTML for formatting (Optional - default is no description)
+ * @param {string} [details.cancel] - The text inside the cancel button (Optional - default is 'Return')
+ *
+ * @example
+ * const config = {
+ *   title: 'New alert',
+ *   description: 'This is a alert pop up',
+ *   cancel: 'Go back'
+ * };
+ *
+ * Alertpal.alert(config);
+ */
 Alertpal.alert = function (details) {
 	// Defining HTML elements
 	const title = document.getElementById('ap_title');
@@ -42,7 +89,7 @@ Alertpal.alert = function (details) {
 	// Configuration
 	title.innerText = details.title === undefined ? 'Alert' : details.title;
 	desc.innerHTML = details.description === undefined ? '' : details.description;
-	cancel.innerHTML = details.cancel === undefined ? 'Cancel' : details.cancel;
+	cancel.innerHTML = details.cancel === undefined ? 'Return' : details.cancel;
 	ok.innerHTML = details.ok === undefined ? 'OK' : details.ok;
 	details.callback === undefined ? (ok.style.display = 'none') : (ok.onclick = details.callback);
 
@@ -51,6 +98,29 @@ Alertpal.alert = function (details) {
 	document.getElementById('alertpal_bg').style.display = 'block';
 };
 
+/**
+ * Function to configure and display the 'confirm' style Alertpal
+ *
+ * @memberof Alertpal
+ * @method confirm
+ * @param {object} details - Object to define the configuration of the confirm
+ * @param {string} [details.title] - The title of the alert (Optional - default is 'Alert')
+ * @param {string} [details.description] - The description of the alert. String can also include HTML for formatting (Optional - default is no description)
+ * @param {string} [details.cancel] - The text inside the cancel/return button (Optional - default is 'Return')
+ * @param {string} [details.ok] - The text inside the the ok button (Option - default is 'OK')
+ * @param {function} details.callback - The callback you want to be triggered when the ok button is clicked
+ *
+ * @example
+ * const config = {
+ *   title: 'Delete Item',
+ *   description: 'Are you sure you want to delete this item?',
+ *   cancel: 'No',
+ *   ok: 'Yes',
+ *   callback: deleteItemFunction
+ * };
+ *
+ * Alertpal.confirm(config);
+ */
 Alertpal.confirm = function (details) {
 	// For confirm, since its similar to regular alert, I reuse that function
 	// The alert function is slightly modified to check for a callback
@@ -58,6 +128,25 @@ Alertpal.confirm = function (details) {
 	Alertpal.alert(details);
 };
 
+/**
+ * Function to configure and display the 'message' style Alertpals
+ *
+ * @memberof Alertpal
+ * @method message
+ * @param {string} type - Define what type of message 'normal' / 'success' / 'warn' / 'error'
+ * @param {object} [details] - Object to define the configuration of the alert (Optional - details of defaults below)
+ * @param {string} [details.message] - The message for the alert (Optional - default is 'Alert')
+ * @param {number} [details.timeout] - The time(milliseconds) on how long the alert should stay on screen (Optional - default is 5 seconds)
+ * @param {function} [details.callback] - The callback to be triggered if click is fired on the message (Optional - default is to remove the message)
+ *
+ * @example
+ * const config = {
+ *   message: 'Warning, you cant do that!',
+ *   timeout: 10000
+ * };
+ *
+ * Alertpal.message('warn', config);
+ */
 Alertpal.message = function (type, details) {
 	// Defining container and element
 	const container = document.getElementById('alertpal_message_container');
@@ -113,6 +202,28 @@ Alertpal.message = function (type, details) {
 	}
 };
 
+/**
+ * Function to configure and display the 'alert' style Alertpal
+ *
+ * @memberof Alertpal
+ * @method modal
+ * @param {object} [details] - Object to define the configuration of the alert (Optional - details of defaults below)
+ * @param {string} [details.title] - The title of the alert (Optional - default is 'Alert')
+ * @param {string} [details.description] - The description of the alert. String can also include HTML for formatting (Optional - default is no description)
+ * @param {string} [details.cancel] - The text inside the cancel button (Optional - default is 'Return')
+ * @param {string} [details.ok] - The text inside the the ok button (Option - default is 'OK')
+ * @param {function} [details.callback] - The callback you want to be triggered when the ok button is clicked (Optional - default is no action)
+ *
+ * @example
+ * const config = {
+ *   title: 'Read the rules of the Application',
+ *   description: 'Rules...',
+ *   cancel: 'Decline',
+ *   ok: 'Accept'
+ * };
+ *
+ * Alertpal.modal(config);
+ */
 Alertpal.modal = function (details) {
 	// Applying the modal CSS class to the change the alerts style to suit a modal
 	document.getElementById('alertpal_alert').setAttribute('class', 'alertpal_modal');

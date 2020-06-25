@@ -81,7 +81,7 @@
 
 #alertpal #ap_cancel,
 #alertpal #ap_ok {
-  margin: 2px 0;
+  margin: 0 2px;
   padding: 7px 10px;
   background-color: #1c84b6;
   border-radius: 2px;
@@ -91,7 +91,12 @@
   font-size: 14px;
   font-weight: 600;
   color: #fff;
-  cursor: pointer; }
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none; }
 
 #alertpal #ap_cancel {
   background: none;
