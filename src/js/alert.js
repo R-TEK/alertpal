@@ -18,6 +18,9 @@
  * Alertpal.alert(config);
  */
 Alertpal.alert = function (details) {
+	// The user doesn't have to pass details, so if they don't I define details here to avoid errors
+	if (details === undefined) details = {};
+
 	// Defining HTML elements
 	const title = document.getElementById('ap_title');
 	const desc = document.getElementById('ap_description');

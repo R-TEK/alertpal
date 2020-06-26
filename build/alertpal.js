@@ -77,6 +77,9 @@ function closeAlert() {
  * Alertpal.alert(config);
  */
 Alertpal.alert = function (details) {
+	// The user doesn't have to pass details, so if they don't I define details here to avoid errors
+	if (details === undefined) details = {};
+
 	// Defining HTML elements
 	const title = document.getElementById('ap_title');
 	const desc = document.getElementById('ap_description');
@@ -122,6 +125,14 @@ Alertpal.alert = function (details) {
  * Alertpal.confirm(config);
  */
 Alertpal.confirm = function (details) {
+	// Error handling, if no parameter is specified
+	if (details === undefined)
+		throw 'To use the confirm method, you must pass the "details" parameter';
+
+	// A callback needs to be provided, so if there isn't one I throw an error
+	if (details.callback === undefined && typeof details.callback === 'function')
+		throw 'The confirm method must pass "callback" parameter';
+
 	// For confirm, since its similar to regular alert, I reuse that function
 	// The alert function is slightly modified to check for a callback
 	// If there is not callback then it knows that its not a confirm but an alert, vice versa
@@ -133,7 +144,7 @@ Alertpal.confirm = function (details) {
  *
  * @memberof Alertpal
  * @method message
- * @param {string} type - Define what type of message 'normal' / 'success' / 'warn' / 'error'
+ * @param {string} [type]- Define what type of message 'normal' / 'success' / 'warn' / 'error' (Optional - default is 'normal')
  * @param {object} [details] - Object to define the configuration of the alert (Optional - details of defaults below)
  * @param {string} [details.message] - The message for the alert (Optional - default is 'Alert')
  * @param {number} [details.timeout] - The time(milliseconds) on how long the alert should stay on screen (Optional - default is 5 seconds)
@@ -148,6 +159,10 @@ Alertpal.confirm = function (details) {
  * Alertpal.message('warn', config);
  */
 Alertpal.message = function (type, details) {
+	// Parameters are optional, so if they don't I define them here to avoid errors
+	if (type === undefined) type = 'normal';
+	if (details === undefined) details = {};
+
 	// Defining container and element
 	const container = document.getElementById('alertpal_message_container');
 	const messageNode = document.createElement('p');
