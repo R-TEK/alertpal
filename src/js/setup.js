@@ -7,7 +7,7 @@
 let Alertpal = new Object();
 
 /**
- * Set up function to execute as soon as the DOM has loaded - the function set up the DOM with the require elements and assigns function to events
+ * Set up function to execute as soon as the DOM has loaded - this function sets up the DOM with the required elements and assigns function to events
  *
  * @listens DOMContentLoaded
  * @callback setUp
