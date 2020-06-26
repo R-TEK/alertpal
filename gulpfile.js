@@ -32,11 +32,20 @@ gulp.task('productionScripts', async function () {
 		.pipe(gulp.dest('build'));
 });
 
-// Compiling SASS and minifying files - PRODUCTION BUILD
-gulp.task('productionSass', async function () {
-	gulp.src('src/scss/*.scss')
+// Compiling SASS and minifying for the light css style file - PRODUCTION BUILD
+gulp.task('productionSassLight', async function () {
+	gulp.src('src/scss/alertpal_light.scss')
 		.pipe(sass().on('error', sass.logError))
-		.pipe(concatCSS('alertpal.min.css'))
+		.pipe(concatCSS('alertpal_light.min.css'))
+		.pipe(uglifyCSS())
+		.pipe(gulp.dest('build'));
+});
+
+// Compiling SASS and minifying for the dark css style file - PRODUCTION BUILD
+gulp.task('productionSassDark', async function () {
+	gulp.src('src/scss/alertpal_dark.scss')
+		.pipe(sass().on('error', sass.logError))
+		.pipe(concatCSS('alertpal_dark.min.css'))
 		.pipe(uglifyCSS())
 		.pipe(gulp.dest('build'));
 });
@@ -53,5 +62,11 @@ gulp.task('devBuild', gulp.series('devScripts', 'devSass'));
 // Combining multiple tasks into one build - DEV BUILD
 gulp.task(
 	'productionBuild',
-	gulp.series('productionScripts', 'productionSass', 'devScripts', 'devSass')
+	gulp.series(
+		'productionScripts',
+		'productionSassLight',
+		'productionSassDark',
+		'devScripts',
+		'devSass'
+	)
 );
