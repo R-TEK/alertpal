@@ -153,7 +153,7 @@
 
 #alertpal #ap_cancel,
 #alertpal #ap_ok {
-  margin: 0 2px;
+  margin: 0 2px 1px 2px;
   padding: 7px 10px;
   background-color: #1c84b6;
   border-radius: 2px;
@@ -197,6 +197,7 @@
   text-align: center;
   transition: all 0.2s;
   overflow-wrap: break-word;
+  pointer-events: auto;
   cursor: pointer;
   -webkit-animation: rollDown ease 0.2s;
   -moz-animation: rollDown ease 0.2s;
@@ -223,3 +224,22 @@
 #alertpal .normal {
   background-color: #f6f8fa;
   color: #111; }
+
+/*
+ * Media Queries
+ */
+/*
+ * 400px or below media query - for screen sizes 400px or below
+ */
+@media only screen and (max-width: 400px) {
+  #alertpal #alertpal_alert {
+    width: 98%;
+    left: 1%; }
+  #alertpal .alertpal_modal {
+    width: 98% !important;
+    height: 90% !important;
+    left: 1% !important;
+    right: 5% !important; }
+  #alertpal .ap_message {
+    padding: 10px 10px;
+    width: 200px; } }

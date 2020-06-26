@@ -60,7 +60,7 @@
 
 	#ap_cancel,
 	#ap_ok {
-		margin: 0 2px;
+		margin: 0 2px 1px 2px;
 		padding: 7px 10px;
 		background-color: #1c84b6;
 		border-radius: 2px;
@@ -90,6 +90,7 @@
 		position: fixed;
 		top: 0;
 		right: 0;
+		pointer-events: none;
 	}
 
 	.ap_message {
@@ -104,6 +105,7 @@
 		text-align: center;
 		transition: $quickTransition;
 		overflow-wrap: break-word;
+		pointer-events: auto;
 		cursor: pointer;
 		@include animation(rollDown ease 0.2s);
 		@include no-select;
@@ -129,3 +131,9 @@
 		color: #fff;
 	}
 }
+
+/*
+ * Media Queries
+ */
+
+@import '400px_mq';
