@@ -30,8 +30,6 @@ Alertpal.alert = function (details) {
 	// Showing the ok button
 	ok.style.display = 'inline-block';
 
-	console.log(details);
-
 	// Configuration
 	title.innerText = details.title === undefined ? 'Alert' : details.title;
 	desc.innerHTML = details.description === undefined ? '' : details.description;

@@ -23,8 +23,8 @@ document.addEventListener('DOMContentLoaded', function () {
 			<div id="ap_body">
 				<p id="ap_description"></p>
 				<div id="ap_buttons">
-					<button id="ap_cancel"></button>
-					<button id="ap_ok"></button>
+					<button id="ap_cancel" name="cancel"></button>
+					<button id="ap_ok" name="ok"></button>
 				</div>
 			</div>
 		</aside>
@@ -88,8 +88,6 @@ Alertpal.alert = function (details) {
 
 	// Showing the ok button
 	ok.style.display = 'inline-block';
-
-	console.log(details);
 
 	// Configuration
 	title.innerText = details.title === undefined ? 'Alert' : details.title;
