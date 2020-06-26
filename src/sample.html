@@ -6,7 +6,7 @@
 
 	-->
 	<head>
-		<link rel="stylesheet" type="text/css" href="../build/alertpal_dark.css" />
+		<link rel="stylesheet" type="text/css" href="../build/alertpal_light.css" />
 	</head>
 	<body>
 		<h1>JavaScript Alerts</h1>
@@ -38,7 +38,7 @@
 					cancel: 'I do not Accept',
 					ok: 'I Accept',
 					callback: function () {
-						Alertpal.alert({ title: 'You have accepted', cancel: 'Return' });
+						console.log('CONFIRM CALLBACK');
 					}
 				};
 
@@ -55,7 +55,8 @@
 					ok: 'Agree',
 					cancel: 'Disagree',
 					callback: function () {
-						Alertpal.alert({ title: 'You have accepted' });
+						console.log('MODAL CALLBACK');
+						Alertpal.alert({ title: 'From modal' });
 					}
 				};
 
