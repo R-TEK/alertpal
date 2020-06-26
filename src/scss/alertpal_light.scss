@@ -12,7 +12,7 @@
 		background-color: #000;
 		opacity: 0.5;
 		z-index: 98;
-		animation: fadeIn ease 0.2s;
+		@include animation(fadeIn ease 0.2s);
 	}
 
 	#alertpal_alert {
@@ -30,7 +30,7 @@
 		overflow-y: auto;
 		overflow-x: hidden;
 		z-index: 99;
-		animation: popUp ease 0.2s;
+		@include animation(popUp ease 0.2s);
 	}
 
 	.alertpal_modal {
@@ -105,8 +105,8 @@
 		text-align: center;
 		transition: $quickTransition;
 		overflow-wrap: break-word;
-		animation: rollDown ease 0.3s;
 		cursor: pointer;
+		@include animation(rollDown ease 0.2s);
 		@include no-select;
 	}
 
