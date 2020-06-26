@@ -1,0 +1,24 @@
+/*
+ * 400px or below media query - for screen sizes 400px or below
+ */
+
+@media only screen and (max-width: 400px) {
+	#alertpal {
+		#alertpal_alert {
+			width: 98%;
+			left: 1%;
+		}
+
+		.alertpal_modal {
+			width: 98% !important;
+			height: 90% !important;
+			left: 1% !important;
+			right: 5% !important;
+		}
+
+		.ap_message {
+			padding: 10px 10px;
+			width: 200px;
+		}
+	}
+}

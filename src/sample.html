@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<!--TESTING PURPOSES ONLY - NOT FOR PRODUCTION-->
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" type="text/css" href="../build/alertpal_light.css" />
+	</head>
+	<body>
+		<h1>JavaScript Alerts</h1>
+		<br />
+		<button onclick="alert()" style="font-size: 18px;">Alert</button>
+		<button onclick="confirm()" style="font-size: 18px;">Confirm</button>
+		<button onclick="modal()" style="font-size: 18px;">Modal</button>
+		<button onclick="normal()" style="font-size: 18px;">Normal</button>
+		<button onclick="success()" style="font-size: 18px;">Success</button>
+		<button onclick="warn()" style="font-size: 18px;">Warn</button>
+		<button onclick="error()" style="font-size: 18px;">Error</button>
+		<script type="text/javascript" src="../build/alertpal.js"></script>
+		<script type="text/javascript">
+			// Alert style
+			function alert() {
+				const config = {
+					title: 'This is an alert',
+					description: 'Add optional description'
+				};
+
+				Alertpal.alert(config);
+			}
+
+			// Confirm style
+			function confirm() {
+				const config = {
+					title: 'This is a confirm dialogue',
+					description: 'Do you accept?',
+					cancel: 'I do not Accept',
+					ok: 'I Accept',
+					callback: function () {
+						console.log('CONFIRM CALLBACK');
+					}
+				};
+
+				Alertpal.confirm(config);
+			}
+
+			// Modal box
+			function modal() {
+				console.log('ewfewfwef');
+				const config = {
+					title: 'Terms and conditions',
+					description:
+						'rules and rules and Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee',
+					ok: 'Agree',
+					cancel: 'Disagree',
+					callback: function () {
+						console.log('MODAL CALLBACK');
+						Alertpal.alert({ title: 'From modal' });
+					}
+				};
+
+				Alertpal.modal(config);
+			}
+
+			// Default message
+			function normal() {
+				const config = {
+					message: 'Normal'
+				};
+
+				Alertpal.message('default', config);
+			}
+
+			// Success message
+			function success() {
+				const config = {
+					message: 'Success'
+				};
+
+				Alertpal.message('success', config);
+			}
+
+			function makeAlert() {
+				Alertpal.alert({
+					title: 'Warning details',
+					description: 'blah balah balahif vergnogm gomgoremg merg omoregm'
+				});
+			}
+
+			// Warn message
+			function warn() {
+				const config = {
+					message: 'Warning! Click for more info.',
+					callback: makeAlert
+				};
+
+				Alertpal.message('warn', config);
+			}
+
+			// Error message
+			function error() {
+				const config = {
+					message: 'There has been and error'
+				};
+
+				Alertpal.message('error', config);
+			}
+		</script>
+	</body>
+	<html></html>
+</html>
