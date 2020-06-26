@@ -15,7 +15,8 @@
  *   title: 'Read the rules of the Application',
  *   description: 'Rules...',
  *   cancel: 'Decline',
- *   ok: 'Accept'
+ *   ok: 'Accept',
+ *   callback: acceptFunction
  * };
  *
  * Alertpal.modal(config);
