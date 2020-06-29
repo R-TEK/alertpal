@@ -1,11 +1,12 @@
 {
-	"name": "alerts",
-	"version": "1.0.0",
-	"description": "###### Version: 1.0.0",
+	"name": "@r-tek/alertpal",
+	"version": "0.0.1",
+	"description": "",
 	"main": "gulpfile.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"doc": "jsdoc -c jsdoc.json"
+		"doc": "jsdoc -c jsdoc.json",
+		"gen": "node_modules/.bin/jsdoc --configure .jsdoc.json --verbose"
 	},
 	"author": "",
 	"license": "ISC",

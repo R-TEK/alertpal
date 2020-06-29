@@ -10,6 +10,7 @@
 		"monospaceLinks": true
 	},
 	"opts": {
+		"template": "./node_modules/jsdoc/templates/jsdoc-template-master",
 		"recurse": true,
 		"destination": "./docs/"
 	}

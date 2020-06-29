@@ -1,91 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>JSDoc: Namespace: Alertpal</title>
 
-    <script src="scripts/prettify/prettify.js"> </script>
-    <script src="scripts/prettify/lang-css.js"> </script>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
-    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>
+      Alertpal - Documentation
+  </title>
+
+  <link href="https://www.braintreepayments.com/images/favicon-ccda0b14.png" rel="icon" type="image/png">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+  <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+  <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+  
+
+  
+
+  <!-- start Mixpanel -->
+  <script type="text/javascript">(function(e,a){if(!a.__SV){var b=window;try{var c,l,i,j=b.location,g=j.hash;c=function(a,b){return(l=a.match(RegExp(b+"=([^&]*)")))?l[1]:null};g&&c(g,"state")&&(i=JSON.parse(decodeURIComponent(c(g,"state"))),"mpeditor"===i.action&&(b.sessionStorage.setItem("_mpcehash",g),history.replaceState(i.desiredHash||"",e.title,j.pathname+j.search)))}catch(m){}var k,h;window.mixpanel=a;a._i=[];a.init=function(b,c,f){function e(b,a){var c=a.split(".");2==c.length&&(b=b[c[0]],a=c[1]);b[a]=function(){b.push([a].concat(Array.prototype.slice.call(arguments,
+  0)))}}var d=a;"undefined"!==typeof f?d=a[f]=[]:f="mixpanel";d.people=d.people||[];d.toString=function(b){var a="mixpanel";"mixpanel"!==f&&(a+="."+f);b||(a+=" (stub)");return a};d.people.toString=function(){return d.toString(1)+".people (stub)"};k="disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config reset people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
+  for(h=0;h<k.length;h++)e(d,k[h]);a._i.push([b,c,f])};a.__SV=1.2;b=e.createElement("script");b.type="text/javascript";b.async=!0;b.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";c=e.getElementsByTagName("script")[0];c.parentNode.insertBefore(b,c)}})(document,window.mixpanel||[]);
+  mixpanel.init("1919205b2da72e4da3b9b6639b444d59");</script>
+  <!-- end Mixpanel -->
 </head>
 
 <body>
+  <svg style="display: none;">
+    <defs>
+      <symbol id="linkIcon" fill="#706d77" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 0h24v24H0z" fill="none"/>
+          <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/>
+      </symbol>
+    </defs>
+  </svg>
 
-<div id="main">
+  <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+  <label for="nav-trigger" class="navicon-button x">
+    <div class="navicon"></div>
+  </label>
 
-    <h1 class="page-title">Namespace: Alertpal</h1>
+  <label for="nav-trigger" class="overlay"></label>
+
+  <div class="top-nav-wrapper">
+    <ul>
+      <li >
+        <a href="index.html">
+          
+            <svg fill="#6D6D6D" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+              <path d="M0 0h24v24H0z" fill="none"/>
+            </svg>
+          
+          
+        </a>
+      </li>
+
+      
+
+    </ul>
+  </div>
+
+  <nav>
+    <h3 class="reference-title">
+      Braintree SDK Client Reference
+    </h3>
 
     
 
+    <h3 id="global-nav">Global</h3><ul><li><a href="global.html#closeAlert">closeAlert</a></li></ul>
+  </nav>
 
+  <div id="main">
+    
+      <h1 class="page-title">
+        Alertpal
+      </h1>
+    
 
+    
 
 <section>
-
-<header>
+  <header>
     
-        <h2>Alertpal</h2>
+      <h2>
         
-    
-</header>
+        Alertpal
+        
+      </h2>
 
-<article>
+      
+    
+  </header>
+
+  <article>
     <div class="container-overview">
-    
+      
         
-            <div class="description"><p>Creation of the Alertpal Object</p></div>
+            <div class="description">
+              <p>Creation of the Alertpal Object</p>
+            </div>
         
 
         
-
 
 <dl class="details">
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
     <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="setup.js.html">setup.js</a>, <a href="setup.js.html#line1">line 1</a>
-    </li></ul></dd>
-    
+    <dd class="tag-source">
+      <ul class="dummy">
+        <li>
+          <a href="setup.js.html">setup.js</a>, <a href="setup.js.html#line1">line 1</a>
+        </li>
+      </ul>
+    </dd>
+  
 
-    
+  
 
-    
+  
 
-    
+  
 </dl>
 
 
         
-    
+      
     </div>
 
     
@@ -94,33 +164,39 @@
 
     
 
-    
+     
 
     
 
     
 
     
+      <h3 class="subsection-title">Methods</h3>
 
-    
-        <h3 class="subsection-title">Methods</h3>
-
+      
         
-            
-
-    
-
-    
-    <h4 class="name" id=".alert"><span class="type-signature">(static) </span>alert<span class="signature">(details<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
-    
-
-    
 
 
+  
 
-<div class="description">
+  <span class='name-container'>
+    <a class="link-icon" href="#.alert">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h4 class="name" id=".alert">
+      <span class="type-signature">(static) </span>alert<span class="signature">(details<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span>
+    </h4>
+  </span>
+
+  
+
+
+
+  <div class="description">
     <p>Function to configure and display the 'alert' style Alertpal</p>
-</div>
+  </div>
 
 
 
@@ -128,195 +204,216 @@
 
 
 
-
-
-    <h5>Parameters:</h5>
-    
+  <h5>Parameters:</h5>
+  
 
 <table class="params">
-    <thead>
+  <thead>
     <tr>
-        
+      
         <th>Name</th>
-        
+      
 
-        <th>Type</th>
+      <th>Type</th>
 
-        
+      
         <th>Attributes</th>
-        
+      
 
-        
+      
 
-        <th class="last">Description</th>
+      <th class="last">Description</th>
     </tr>
-    </thead>
+  </thead>
 
-    <tbody>
+  <tbody>
+    
+      <tr>
+        
+          <td class="name"><code>details</code></td>
+        
+
+        <td class="type">
+          
+            
+    <span class="param-type">
+      object
+    </span>
+
     
 
-        <tr>
+
+          
+        </td>
+
+        
+          <td class="attributes">
             
-                <td class="name"><code>details</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">object</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
+              &lt;optional><br>
             
 
             
 
-            <td class="description last"><p>Object to define the configuration of the alert (Optional - details of defaults below)</p>
-                <h6>Properties</h6>
-                
+            
+          </td>
+        
+
+        
+
+        <td class="description last">
+          <p>Object to define the configuration of the alert (Optional - details of defaults below)</p>
+          
+            <h6>Properties</h6>
+            
 
 <table class="params">
-    <thead>
+  <thead>
     <tr>
-        
+      
         <th>Name</th>
-        
+      
 
-        <th>Type</th>
+      <th>Type</th>
 
-        
+      
         <th>Attributes</th>
-        
+      
 
-        
+      
 
-        <th class="last">Description</th>
+      <th class="last">Description</th>
     </tr>
-    </thead>
+  </thead>
 
-    <tbody>
+  <tbody>
     
+      <tr>
+        
+          <td class="name"><code>title</code></td>
+        
 
-        <tr>
+        <td class="type">
+          
             
-                <td class="name"><code>title</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>The title of the alert (Optional - default is 'Alert')</p></td>
-        </tr>
+    <span class="param-type">
+      string
+    </span>
 
     
 
-        <tr>
+
+          
+        </td>
+
+        
+          <td class="attributes">
             
-                <td class="name"><code>description</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
+              &lt;optional><br>
             
 
             
 
-            <td class="description last"><p>The description of the alert. String can also include HTML for formatting (Optional - default is no description)</p></td>
-        </tr>
+            
+          </td>
+        
+
+        
+
+        <td class="description last">
+          <p>The title of the alert (Optional - default is 'Alert')</p>
+          
+        </td>
+      </tr>
+
+    
+      <tr>
+        
+          <td class="name"><code>description</code></td>
+        
+
+        <td class="type">
+          
+            
+    <span class="param-type">
+      string
+    </span>
 
     
 
-        <tr>
+
+          
+        </td>
+
+        
+          <td class="attributes">
             
-                <td class="name"><code>cancel</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
+              &lt;optional><br>
             
 
             
 
-            <td class="description last"><p>The text inside the cancel button (Optional - default is 'Return')</p></td>
-        </tr>
+            
+          </td>
+        
+
+        
+
+        <td class="description last">
+          <p>The description of the alert. String can also include HTML for formatting (Optional - default is no description)</p>
+          
+        </td>
+      </tr>
 
     
-    </tbody>
+      <tr>
+        
+          <td class="name"><code>cancel</code></td>
+        
+
+        <td class="type">
+          
+            
+    <span class="param-type">
+      string
+    </span>
+
+    
+
+
+          
+        </td>
+
+        
+          <td class="attributes">
+            
+              &lt;optional><br>
+            
+
+            
+
+            
+          </td>
+        
+
+        
+
+        <td class="description last">
+          <p>The text inside the cancel button (Optional - default is 'Return')</p>
+          
+        </td>
+      </tr>
+
+    
+  </tbody>
 </table>
 
-            </td>
-        </tr>
+          
+        </td>
+      </tr>
 
     
-    </tbody>
+  </tbody>
 </table>
-
 
 
 
@@ -324,42 +421,46 @@
 
 <dl class="details">
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
     <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="alert.js.html">alert.js</a>, <a href="alert.js.html#line1">line 1</a>
-    </li></ul></dd>
-    
+    <dd class="tag-source">
+      <ul class="dummy">
+        <li>
+          <a href="alert.js.html">alert.js</a>, <a href="alert.js.html#line1">line 1</a>
+        </li>
+      </ul>
+    </dd>
+  
 
-    
+  
 
-    
+  
 
-    
+  
 </dl>
 
 
@@ -374,15 +475,16 @@
 
 
 
-
-
-
-
-
-
-    <h5>Example</h5>
+  <div class="example-container">
+    <a class="link-icon" href="#alert-examples">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h5 id="alert-examples">Example</h5>
     
-    <pre class="prettyprint"><code>const config = {
+
+  <pre class="prettyprint"><code>const config = {
   title: 'New alert',
   description: 'This is a alert pop up',
   cancel: 'Go back'
@@ -391,23 +493,33 @@
 Alertpal.alert(config);</code></pre>
 
 
+  </div>
 
+
+      
         
-            
-
-    
-
-    
-    <h4 class="name" id=".confirm"><span class="type-signature">(static) </span>confirm<span class="signature">(details)</span><span class="type-signature"></span></h4>
-    
-
-    
 
 
+  
 
-<div class="description">
+  <span class='name-container'>
+    <a class="link-icon" href="#.confirm">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h4 class="name" id=".confirm">
+      <span class="type-signature">(static) </span>confirm<span class="signature">(details)</span><span class="type-signature"></span>
+    </h4>
+  </span>
+
+  
+
+
+
+  <div class="description">
     <p>Function to configure and display the 'confirm' style Alertpal</p>
-</div>
+  </div>
 
 
 
@@ -415,247 +527,280 @@ Alertpal.alert(config);</code></pre>
 
 
 
-
-
-    <h5>Parameters:</h5>
-    
+  <h5>Parameters:</h5>
+  
 
 <table class="params">
-    <thead>
+  <thead>
     <tr>
-        
+      
         <th>Name</th>
-        
+      
 
-        <th>Type</th>
+      <th>Type</th>
 
-        
+      
 
-        
+      
 
-        <th class="last">Description</th>
+      <th class="last">Description</th>
     </tr>
-    </thead>
+  </thead>
 
-    <tbody>
+  <tbody>
+    
+      <tr>
+        
+          <td class="name"><code>details</code></td>
+        
+
+        <td class="type">
+          
+            
+    <span class="param-type">
+      object
+    </span>
+
     
 
-        <tr>
-            
-                <td class="name"><code>details</code></td>
-            
 
-            <td class="type">
+          
+        </td>
+
+        
+
+        
+
+        <td class="description last">
+          <p>Object to define the configuration of the confirm</p>
+          
+            <h6>Properties</h6>
             
-                
-<span class="param-type">object</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>Object to define the configuration of the confirm</p>
-                <h6>Properties</h6>
-                
 
 <table class="params">
-    <thead>
+  <thead>
     <tr>
-        
+      
         <th>Name</th>
-        
+      
 
-        <th>Type</th>
+      <th>Type</th>
 
-        
+      
         <th>Attributes</th>
-        
+      
 
-        
+      
 
-        <th class="last">Description</th>
+      <th class="last">Description</th>
     </tr>
-    </thead>
+  </thead>
 
-    <tbody>
+  <tbody>
     
+      <tr>
+        
+          <td class="name"><code>title</code></td>
+        
 
-        <tr>
+        <td class="type">
+          
             
-                <td class="name"><code>title</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>The title of the alert (Optional - default is 'Alert')</p></td>
-        </tr>
+    <span class="param-type">
+      string
+    </span>
 
     
 
-        <tr>
+
+          
+        </td>
+
+        
+          <td class="attributes">
             
-                <td class="name"><code>description</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
+              &lt;optional><br>
             
 
             
 
-            <td class="description last"><p>The description of the alert. String can also include HTML for formatting (Optional - default is no description)</p></td>
-        </tr>
+            
+          </td>
+        
+
+        
+
+        <td class="description last">
+          <p>The title of the alert (Optional - default is 'Alert')</p>
+          
+        </td>
+      </tr>
+
+    
+      <tr>
+        
+          <td class="name"><code>description</code></td>
+        
+
+        <td class="type">
+          
+            
+    <span class="param-type">
+      string
+    </span>
 
     
 
-        <tr>
+
+          
+        </td>
+
+        
+          <td class="attributes">
             
-                <td class="name"><code>cancel</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
+              &lt;optional><br>
             
 
             
 
-            <td class="description last"><p>The text inside the cancel/return button (Optional - default is 'Return')</p></td>
-        </tr>
+            
+          </td>
+        
+
+        
+
+        <td class="description last">
+          <p>The description of the alert. String can also include HTML for formatting (Optional - default is no description)</p>
+          
+        </td>
+      </tr>
+
+    
+      <tr>
+        
+          <td class="name"><code>cancel</code></td>
+        
+
+        <td class="type">
+          
+            
+    <span class="param-type">
+      string
+    </span>
 
     
 
-        <tr>
+
+          
+        </td>
+
+        
+          <td class="attributes">
             
-                <td class="name"><code>ok</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
+              &lt;optional><br>
             
 
             
 
-            <td class="description last"><p>The text inside the the ok button (Option - default is 'OK')</p></td>
-        </tr>
+            
+          </td>
+        
+
+        
+
+        <td class="description last">
+          <p>The text inside the cancel/return button (Optional - default is 'Return')</p>
+          
+        </td>
+      </tr>
+
+    
+      <tr>
+        
+          <td class="name"><code>ok</code></td>
+        
+
+        <td class="type">
+          
+            
+    <span class="param-type">
+      string
+    </span>
 
     
 
-        <tr>
+
+          
+        </td>
+
+        
+          <td class="attributes">
             
-                <td class="name"><code>callback</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">function</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-
-                
-                </td>
+              &lt;optional><br>
             
 
             
 
-            <td class="description last"><p>The callback you want to be triggered when the ok button is clicked</p></td>
-        </tr>
+            
+          </td>
+        
+
+        
+
+        <td class="description last">
+          <p>The text inside the the ok button (Option - default is 'OK')</p>
+          
+        </td>
+      </tr>
 
     
-    </tbody>
+      <tr>
+        
+          <td class="name"><code>callback</code></td>
+        
+
+        <td class="type">
+          
+            
+    <span class="param-type">
+      function
+    </span>
+
+    
+
+
+          
+        </td>
+
+        
+          <td class="attributes">
+            
+
+            
+
+            
+          </td>
+        
+
+        
+
+        <td class="description last">
+          <p>The callback you want to be triggered when the ok button is clicked</p>
+          
+        </td>
+      </tr>
+
+    
+  </tbody>
 </table>
 
-            </td>
-        </tr>
+          
+        </td>
+      </tr>
 
     
-    </tbody>
+  </tbody>
 </table>
-
 
 
 
@@ -663,42 +808,46 @@ Alertpal.alert(config);</code></pre>
 
 <dl class="details">
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
     <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="confirm.js.html">confirm.js</a>, <a href="confirm.js.html#line1">line 1</a>
-    </li></ul></dd>
-    
+    <dd class="tag-source">
+      <ul class="dummy">
+        <li>
+          <a href="confirm.js.html">confirm.js</a>, <a href="confirm.js.html#line1">line 1</a>
+        </li>
+      </ul>
+    </dd>
+  
 
-    
+  
 
-    
+  
 
-    
+  
 </dl>
 
 
@@ -713,15 +862,16 @@ Alertpal.alert(config);</code></pre>
 
 
 
-
-
-
-
-
-
-    <h5>Example</h5>
+  <div class="example-container">
+    <a class="link-icon" href="#confirm-examples">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h5 id="confirm-examples">Example</h5>
     
-    <pre class="prettyprint"><code>const config = {
+
+  <pre class="prettyprint"><code>const config = {
   title: 'Delete Item',
   description: 'Are you sure you want to delete this item?',
   cancel: 'No',
@@ -732,23 +882,33 @@ Alertpal.alert(config);</code></pre>
 Alertpal.confirm(config);</code></pre>
 
 
+  </div>
 
+
+      
         
-            
-
-    
-
-    
-    <h4 class="name" id=".message"><span class="type-signature">(static) </span>message<span class="signature">(type<span class="signature-attributes">opt</span>, details<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
-    
-
-    
 
 
+  
 
-<div class="description">
+  <span class='name-container'>
+    <a class="link-icon" href="#.message">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h4 class="name" id=".message">
+      <span class="type-signature">(static) </span>message<span class="signature">(type<span class="signature-attributes">opt</span>, details<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span>
+    </h4>
+  </span>
+
+  
+
+
+
+  <div class="description">
     <p>Function to configure and display the 'message' style Alertpals</p>
-</div>
+  </div>
 
 
 
@@ -756,228 +916,255 @@ Alertpal.confirm(config);</code></pre>
 
 
 
-
-
-    <h5>Parameters:</h5>
-    
+  <h5>Parameters:</h5>
+  
 
 <table class="params">
-    <thead>
+  <thead>
     <tr>
-        
+      
         <th>Name</th>
-        
+      
 
-        <th>Type</th>
+      <th>Type</th>
 
-        
+      
         <th>Attributes</th>
-        
+      
 
-        
+      
 
-        <th class="last">Description</th>
+      <th class="last">Description</th>
     </tr>
-    </thead>
+  </thead>
 
-    <tbody>
+  <tbody>
     
+      <tr>
+        
+          <td class="name"><code>type</code></td>
+        
 
-        <tr>
+        <td class="type">
+          
             
-                <td class="name"><code>type</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>Define what type of message 'normal' / 'success' / 'warn' / 'error' (Optional - default is 'normal')</p></td>
-        </tr>
+    <span class="param-type">
+      string
+    </span>
 
     
 
-        <tr>
+
+          
+        </td>
+
+        
+          <td class="attributes">
             
-                <td class="name"><code>details</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">object</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
+              &lt;optional><br>
             
 
             
 
-            <td class="description last"><p>Object to define the configuration of the alert (Optional - details of defaults below)</p>
-                <h6>Properties</h6>
-                
+            
+          </td>
+        
+
+        
+
+        <td class="description last">
+          <p>Define what type of message 'normal' / 'success' / 'warn' / 'error' (Optional - default is 'normal')</p>
+          
+        </td>
+      </tr>
+
+    
+      <tr>
+        
+          <td class="name"><code>details</code></td>
+        
+
+        <td class="type">
+          
+            
+    <span class="param-type">
+      object
+    </span>
+
+    
+
+
+          
+        </td>
+
+        
+          <td class="attributes">
+            
+              &lt;optional><br>
+            
+
+            
+
+            
+          </td>
+        
+
+        
+
+        <td class="description last">
+          <p>Object to define the configuration of the alert (Optional - details of defaults below)</p>
+          
+            <h6>Properties</h6>
+            
 
 <table class="params">
-    <thead>
+  <thead>
     <tr>
-        
+      
         <th>Name</th>
-        
+      
 
-        <th>Type</th>
+      <th>Type</th>
 
-        
+      
         <th>Attributes</th>
-        
+      
 
-        
+      
 
-        <th class="last">Description</th>
+      <th class="last">Description</th>
     </tr>
-    </thead>
+  </thead>
 
-    <tbody>
+  <tbody>
     
+      <tr>
+        
+          <td class="name"><code>message</code></td>
+        
 
-        <tr>
+        <td class="type">
+          
             
-                <td class="name"><code>message</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>The message for the alert (Optional - default is 'Alert')</p></td>
-        </tr>
+    <span class="param-type">
+      string
+    </span>
 
     
 
-        <tr>
+
+          
+        </td>
+
+        
+          <td class="attributes">
             
-                <td class="name"><code>timeout</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">number</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
+              &lt;optional><br>
             
 
             
 
-            <td class="description last"><p>The time(milliseconds) on how long the alert should stay on screen (Optional - default is 5 seconds)</p></td>
-        </tr>
+            
+          </td>
+        
+
+        
+
+        <td class="description last">
+          <p>The message for the alert (Optional - default is 'Alert')</p>
+          
+        </td>
+      </tr>
+
+    
+      <tr>
+        
+          <td class="name"><code>timeout</code></td>
+        
+
+        <td class="type">
+          
+            
+    <span class="param-type">
+      number
+    </span>
 
     
 
-        <tr>
+
+          
+        </td>
+
+        
+          <td class="attributes">
             
-                <td class="name"><code>callback</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">function</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
+              &lt;optional><br>
             
 
             
 
-            <td class="description last"><p>The callback to be triggered if click is fired on the message (Optional - default is to remove the message)</p></td>
-        </tr>
+            
+          </td>
+        
+
+        
+
+        <td class="description last">
+          <p>The time(milliseconds) on how long the alert should stay on screen (Optional - default is 5 seconds)</p>
+          
+        </td>
+      </tr>
 
     
-    </tbody>
+      <tr>
+        
+          <td class="name"><code>callback</code></td>
+        
+
+        <td class="type">
+          
+            
+    <span class="param-type">
+      function
+    </span>
+
+    
+
+
+          
+        </td>
+
+        
+          <td class="attributes">
+            
+              &lt;optional><br>
+            
+
+            
+
+            
+          </td>
+        
+
+        
+
+        <td class="description last">
+          <p>The callback to be triggered if click is fired on the message (Optional - default is to remove the message)</p>
+          
+        </td>
+      </tr>
+
+    
+  </tbody>
 </table>
 
-            </td>
-        </tr>
+          
+        </td>
+      </tr>
 
     
-    </tbody>
+  </tbody>
 </table>
-
 
 
 
@@ -985,42 +1172,46 @@ Alertpal.confirm(config);</code></pre>
 
 <dl class="details">
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
     <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="message.js.html">message.js</a>, <a href="message.js.html#line1">line 1</a>
-    </li></ul></dd>
-    
+    <dd class="tag-source">
+      <ul class="dummy">
+        <li>
+          <a href="message.js.html">message.js</a>, <a href="message.js.html#line1">line 1</a>
+        </li>
+      </ul>
+    </dd>
+  
 
-    
+  
 
-    
+  
 
-    
+  
 </dl>
 
 
@@ -1035,15 +1226,16 @@ Alertpal.confirm(config);</code></pre>
 
 
 
-
-
-
-
-
-
-    <h5>Example</h5>
+  <div class="example-container">
+    <a class="link-icon" href="#message-examples">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h5 id="message-examples">Example</h5>
     
-    <pre class="prettyprint"><code>const config = {
+
+  <pre class="prettyprint"><code>const config = {
   message: 'Warning, you cant do that!',
   timeout: 10000
 };
@@ -1051,23 +1243,33 @@ Alertpal.confirm(config);</code></pre>
 Alertpal.message('warn', config);</code></pre>
 
 
+  </div>
 
+
+      
         
-            
-
-    
-
-    
-    <h4 class="name" id=".modal"><span class="type-signature">(static) </span>modal<span class="signature">(details<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
-    
-
-    
 
 
+  
 
-<div class="description">
+  <span class='name-container'>
+    <a class="link-icon" href="#.modal">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h4 class="name" id=".modal">
+      <span class="type-signature">(static) </span>modal<span class="signature">(details<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span>
+    </h4>
+  </span>
+
+  
+
+
+
+  <div class="description">
     <p>Function to configure and display the 'alert' style Alertpal</p>
-</div>
+  </div>
 
 
 
@@ -1075,261 +1277,294 @@ Alertpal.message('warn', config);</code></pre>
 
 
 
-
-
-    <h5>Parameters:</h5>
-    
+  <h5>Parameters:</h5>
+  
 
 <table class="params">
-    <thead>
+  <thead>
     <tr>
-        
+      
         <th>Name</th>
-        
+      
 
-        <th>Type</th>
+      <th>Type</th>
 
-        
+      
         <th>Attributes</th>
-        
+      
 
-        
+      
 
-        <th class="last">Description</th>
+      <th class="last">Description</th>
     </tr>
-    </thead>
+  </thead>
 
-    <tbody>
+  <tbody>
+    
+      <tr>
+        
+          <td class="name"><code>details</code></td>
+        
+
+        <td class="type">
+          
+            
+    <span class="param-type">
+      object
+    </span>
+
     
 
-        <tr>
+
+          
+        </td>
+
+        
+          <td class="attributes">
             
-                <td class="name"><code>details</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">object</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
+              &lt;optional><br>
             
 
             
 
-            <td class="description last"><p>Object to define the configuration of the alert (Optional - details of defaults below)</p>
-                <h6>Properties</h6>
-                
+            
+          </td>
+        
+
+        
+
+        <td class="description last">
+          <p>Object to define the configuration of the alert (Optional - details of defaults below)</p>
+          
+            <h6>Properties</h6>
+            
 
 <table class="params">
-    <thead>
+  <thead>
     <tr>
-        
+      
         <th>Name</th>
-        
+      
 
-        <th>Type</th>
+      <th>Type</th>
 
-        
+      
         <th>Attributes</th>
-        
+      
 
-        
+      
 
-        <th class="last">Description</th>
+      <th class="last">Description</th>
     </tr>
-    </thead>
+  </thead>
 
-    <tbody>
+  <tbody>
     
+      <tr>
+        
+          <td class="name"><code>title</code></td>
+        
 
-        <tr>
+        <td class="type">
+          
             
-                <td class="name"><code>title</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>The title of the alert (Optional - default is 'Alert')</p></td>
-        </tr>
+    <span class="param-type">
+      string
+    </span>
 
     
 
-        <tr>
+
+          
+        </td>
+
+        
+          <td class="attributes">
             
-                <td class="name"><code>description</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
+              &lt;optional><br>
             
 
             
 
-            <td class="description last"><p>The description of the alert. String can also include HTML for formatting (Optional - default is no description)</p></td>
-        </tr>
+            
+          </td>
+        
+
+        
+
+        <td class="description last">
+          <p>The title of the alert (Optional - default is 'Alert')</p>
+          
+        </td>
+      </tr>
+
+    
+      <tr>
+        
+          <td class="name"><code>description</code></td>
+        
+
+        <td class="type">
+          
+            
+    <span class="param-type">
+      string
+    </span>
 
     
 
-        <tr>
+
+          
+        </td>
+
+        
+          <td class="attributes">
             
-                <td class="name"><code>cancel</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
+              &lt;optional><br>
             
 
             
 
-            <td class="description last"><p>The text inside the cancel button (Optional - default is 'Return')</p></td>
-        </tr>
+            
+          </td>
+        
+
+        
+
+        <td class="description last">
+          <p>The description of the alert. String can also include HTML for formatting (Optional - default is no description)</p>
+          
+        </td>
+      </tr>
+
+    
+      <tr>
+        
+          <td class="name"><code>cancel</code></td>
+        
+
+        <td class="type">
+          
+            
+    <span class="param-type">
+      string
+    </span>
 
     
 
-        <tr>
+
+          
+        </td>
+
+        
+          <td class="attributes">
             
-                <td class="name"><code>ok</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
+              &lt;optional><br>
             
 
             
 
-            <td class="description last"><p>The text inside the the ok button (Option - default is 'OK')</p></td>
-        </tr>
+            
+          </td>
+        
+
+        
+
+        <td class="description last">
+          <p>The text inside the cancel button (Optional - default is 'Return')</p>
+          
+        </td>
+      </tr>
+
+    
+      <tr>
+        
+          <td class="name"><code>ok</code></td>
+        
+
+        <td class="type">
+          
+            
+    <span class="param-type">
+      string
+    </span>
 
     
 
-        <tr>
+
+          
+        </td>
+
+        
+          <td class="attributes">
             
-                <td class="name"><code>callback</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">function</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
+              &lt;optional><br>
             
 
             
 
-            <td class="description last"><p>The callback you want to be triggered when the ok button is clicked (Optional - default is no action)</p></td>
-        </tr>
+            
+          </td>
+        
+
+        
+
+        <td class="description last">
+          <p>The text inside the the ok button (Option - default is 'OK')</p>
+          
+        </td>
+      </tr>
 
     
-    </tbody>
+      <tr>
+        
+          <td class="name"><code>callback</code></td>
+        
+
+        <td class="type">
+          
+            
+    <span class="param-type">
+      function
+    </span>
+
+    
+
+
+          
+        </td>
+
+        
+          <td class="attributes">
+            
+              &lt;optional><br>
+            
+
+            
+
+            
+          </td>
+        
+
+        
+
+        <td class="description last">
+          <p>The callback you want to be triggered when the ok button is clicked (Optional - default is no action)</p>
+          
+        </td>
+      </tr>
+
+    
+  </tbody>
 </table>
 
-            </td>
-        </tr>
+          
+        </td>
+      </tr>
 
     
-    </tbody>
+  </tbody>
 </table>
-
 
 
 
@@ -1337,42 +1572,46 @@ Alertpal.message('warn', config);</code></pre>
 
 <dl class="details">
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
 
-    
+  
     <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="modal.js.html">modal.js</a>, <a href="modal.js.html#line1">line 1</a>
-    </li></ul></dd>
-    
+    <dd class="tag-source">
+      <ul class="dummy">
+        <li>
+          <a href="modal.js.html">modal.js</a>, <a href="modal.js.html#line1">line 1</a>
+        </li>
+      </ul>
+    </dd>
+  
 
-    
+  
 
-    
+  
 
-    
+  
 </dl>
 
 
@@ -1387,15 +1626,16 @@ Alertpal.message('warn', config);</code></pre>
 
 
 
-
-
-
-
-
-
-    <h5>Example</h5>
+  <div class="example-container">
+    <a class="link-icon" href="#modal-examples">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h5 id="modal-examples">Example</h5>
     
-    <pre class="prettyprint"><code>const config = {
+
+  <pre class="prettyprint"><code>const config = {
   title: 'Read the rules of the Application',
   description: 'Rules...',
   cancel: 'Decline',
@@ -1406,33 +1646,33 @@ Alertpal.message('warn', config);</code></pre>
 Alertpal.modal(config);</code></pre>
 
 
+  </div>
 
-        
+
+      
     
 
     
 
     
-</article>
-
+  </article>
 </section>
 
 
 
 
-</div>
+  </div>
 
-<nav>
-    <h2><a href="index.html">Home</a></h2><h3>Namespaces</h3><ul><li><a href="Alertpal.html">Alertpal</a></li></ul><h3>Global</h3><ul><li><a href="global.html#closeAlert">closeAlert</a></li></ul>
-</nav>
+  <br class="clear">
 
-<br class="clear">
+  <footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.4</a>
+  </footer>
 
-<footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.4</a> on Fri Jun 26 2020 20:19:44 GMT+0100 (British Summer Time)
-</footer>
+  <script src="scripts/linenumber.js"></script>
+  <script src="scripts/pagelocation.js"></script>
 
-<script> prettyPrint(); </script>
-<script src="scripts/linenumber.js"> </script>
+  
+
 </body>
 </html>
