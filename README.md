@@ -1,28 +1,33 @@
-# JavaScript Alerts
+<h1 align="center" style="color: rgb(7, 128, 228)">
+    <a href="https://r-tek.github.io/colr_pickr/" target="blank">
+        <img height="140" src="./assets/img/interface_view.png"/>
+        <br />
+        Colr Pickr
+    </a>
+</h1>
 
-### Rebuild the alerts to be a feature rich alerts system for you to use in your next project. Be sure the watch repository to check back when Ive complete the rebuild. It will soon be ready.
+<p align="center">
+    <b>Colr Pickr, a vanilla JavaScript color picking component built with SVGs, with features like saving colors. Similar design to the chrome-dev-tools color picker</b>
+</p>
+
+<p align="center">
+    <a href="https://github.com/R-TEK/colr_pickr/blob/master/LICENSE">
+        <img src="https://badgen.net/github/license/R-TEK/colr_pickr?color=ff0000" alt="license" />
+    </a>
+    <a href="https://github.com/R-TEK/colr_pickr/graphs/contributors">
+        <img src="https://badgen.net/badge/maintained/Yes?color=008c17">
+    </a>
+    <a href="https://www.npmjs.com/package/@r-tek/colr_pickr">
+        <img src="https://badgen.net/npm/v/@r-tek/colr_pickr?color=7000c5" alt="version" />
+    </a>
+    <a href="https://bundlephobia.com/result?p=@r-tek/colr_pickr@1.0.1">
+        <img src="https://badgen.net/bundlephobia/minzip/@r-tek/colr_pickr?color=158fcc" alt="minzip size" />
+    </a>
+    <a href="https://lgtm.com/projects/g/R-TEK/colr_pickr/context:javascript">
+        <img alt="Language grade: JavaScript" src="https://img.shields.io/lgtm/grade/javascript/g/R-TEK/colr_pickr.svg?logo=lgtm&logoWidth=18"/>
+    </a>
+</p>
+
+<br/>
 
 ---
-
-###### Version: 1.0.0
-
-## Description:
-
-This is a lightweight custom javascript alerts system to bring up an modal, either to notify the user or confirm a users action.
-
-## How to use:
-
-#### Code Application
-```javascript
-requestAlert(title, description, acceptRequest);
-```
-
-#### Parameters
-- **title:**
-    A string to define the title of the alert
-
-- **description:**
-    A string to define the description of the alert
-
-- **acceptRequest:** _Optional_
-    A function to run on accept. Optional because including this will make the alert a confirm-action alert, if not included them simple a notification.

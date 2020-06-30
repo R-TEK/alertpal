@@ -22,12 +22,13 @@
  * Alertpal.confirm(config);
  */
 Alertpal.confirm = function (details) {
+	console.log(details.callback);
 	// Error handling, if no parameter is specified
 	if (details === undefined)
 		throw 'To use the confirm method, you must pass the "details" parameter';
 
 	// A callback needs to be provided, so if there isn't one I throw an error
-	if (details.callback === undefined && typeof details.callback === 'function')
+	if (details.callback === undefined || typeof details.callback != 'function')
 		throw 'The confirm method must pass "callback" parameter';
 
 	// For confirm, since its similar to regular alert, I reuse that function
