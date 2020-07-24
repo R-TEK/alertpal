@@ -146,7 +146,7 @@
 
 ###### Confirm Dialog
 
-![Confirm Dialog](./assets/img/confirm_dialogue.png)
+![Confirm Dialog](./assets/img/confirm_dialog.png)
 
 ###### Modal
 
