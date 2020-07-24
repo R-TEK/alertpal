@@ -154,14 +154,10 @@
 
 ###### Message
 
--   Normal
-    ![Normal](./assets/img/message_normal.png)
--   Success
-    ![Success](./assets/img/message_success.png)
--   Warn
-    ![Warn](./assets/img/message_warn.png)
--   Error
-    ![Error](./assets/img/message_error.png)
+![Normal](./assets/img/message_normal.png)
+![Success](./assets/img/message_success.png)
+![Warn](./assets/img/message_warn.png)
+![Error](./assets/img/message_error.png)
 
 ### API Information:
 
