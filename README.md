@@ -9,7 +9,7 @@
 </h1>
 
 <p align="center">
-    <b>AlertPal, a lightweight JavaScript alerts system, offering regular alerts, confirm dialogues, and side messages/notifications.</b>
+    <b>AlertPal, a lightweight JavaScript alerts system, offering regular alerts, confirm dialogs, and side messages/notifications.</b>
 </p>
 
 <p align="center">
@@ -144,9 +144,9 @@
 
 ![Simple Alert](./assets/img/simple_alert.png)
 
-###### Confirm Dialogue
+###### Confirm Dialog
 
-![Confirm Dialogue](./assets/img/confirm_dialogue.png)
+![Confirm Dialog](./assets/img/confirm_dialogue.png)
 
 ###### Modal
 

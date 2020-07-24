@@ -26,7 +26,7 @@ Alertpal.modal = function (details) {
 	document.getElementById('alertpal_alert').setAttribute('class', 'alertpal_modal');
 
 	// Calling alert alertpal
-	// Similar to the confirm dialogue, the modal shares attributes with the regular alert
+	// Similar to the confirm dialog, the modal shares attributes with the regular alert
 	// So Im reusing the function
 	Alertpal.alert(details);
 };

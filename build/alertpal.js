@@ -209,9 +209,9 @@ Alertpal.message = function (type, details) {
 	}, timeout);
 
 	// Timeout to trigger the removal of the element in the DOM
-	//	setTimeout(function () {
-	//		container.removeChild(messageNode);
-	//	}, timeout + 200);
+	setTimeout(function () {
+		container.removeChild(messageNode);
+	}, timeout + 200);
 
 	// Checking whether to append or insertBefore
 	if (container.children.length < 1) {
@@ -251,7 +251,7 @@ Alertpal.modal = function (details) {
 	document.getElementById('alertpal_alert').setAttribute('class', 'alertpal_modal');
 
 	// Calling alert alertpal
-	// Similar to the confirm dialogue, the modal shares attributes with the regular alert
+	// Similar to the confirm dialog, the modal shares attributes with the regular alert
 	// So Im reusing the function
 	Alertpal.alert(details);
 };
