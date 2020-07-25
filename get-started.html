@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Get Started - Template</title>
-		<!-- TODO: Fill in meta -->
+		<title>Get Started - AlertPal</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-		<meta name="description" content="" />
-		<meta name="author" content="" />
-		<meta name="keywords" content="" />
+		<meta
+			name="description"
+			content="AlertPal, a lightweight JavaScript alerts system, offering regular alerts, confirm dialogs, and side messages/notifications."
+		/>
+		<meta name="author" content="R-TEK" />
+		<meta
+			name="keywords"
+			content="alert, dialog, confirm, modal, javascript, html, css, lightweight, ui, ui-component, js, animation"
+		/>
 
 		<!-- CSS Files -->
 		<link type="text/css" rel="stylesheet" href="./dist/lib.css" />
@@ -19,7 +24,7 @@
 		<!-- Nav Bar -->
 		<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
 			<div class="container">
-				<a class="navbar-brand js-scroll-trigger" href="#page-top">Template</a>
+				<a class="navbar-brand js-scroll-trigger" href="/index.html">AlertPal</a>
 				<button
 					class="navbar-toggler navbar-toggler-right"
 					type="button"
@@ -55,38 +60,142 @@
 		<article>
 			<section id="example">
 				<h2>EXAMPLE:</h2>
-				<p>An example of the project will go here</p>
+				<p>Click the buttons below to choose try out AlertPal features</p>
+				<button class="btn-primary example_btn" onclick="simpleAlert()">
+					Simple Alert
+				</button>
+				<button class="btn-primary example_btn" onclick="confirmDialog()">
+					Confirm Dialog
+				</button>
+				<button class="btn-primary example_btn" onclick="modalAlert()">
+					Modal Alert
+				</button>
+				<button class="btn-secondary example_btn" onclick="normalMsg()">
+					Normal Message
+				</button>
+				<button class="btn-success example_btn" onclick="successMsg()">
+					Success Message
+				</button>
+				<button class="btn-warning example_btn" onclick="warnMsg()">
+					Warning Message
+				</button>
+				<button class="btn-danger example_btn" onclick="errorMsg()">
+					Error Message
+				</button>
 			</section>
 			<section id="readme">
 				<h2>READ ME:</h2>
 				<div class="markdown-body">
-					<h1 id="project-title">Project Title</h1>
-<p>This is an example readme to show what readme&#39;s look like with this pack.</p>
-<h2 id="getting-started">Getting Started</h2>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit amet aliquam ipsum. Pellentesque ac ante tristique, elementum arcu id, tempus sapien. Proin sed urna vel quam sollicitudin sodales nec ac urna. Donec mollis euismod dolor, in convallis augue ultrices vitae. Maecenas at mauris condimentum, lobortis magna sit amet, auctor magna. In hac habitasse platea dictumst.</p>
-<h3 id="prerequisites">Prerequisites</h3>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit amet aliquam ipsum. Pellentesque ac ante tristique, elementum arcu id, tempus sapien. Proin sed urna vel quam sollicitudin sodales nec ac urna. Donec mollis euismod dolor, in convallis augue ultrices vitae. Maecenas at mauris condimentum, lobortis magna sit amet, auctor magna. In hac habitasse platea dictumst.</p>
-<pre><code>Give examples</code></pre>
-<h3 id="installing">Installing</h3>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit amet aliquam ipsum. Pellentesque ac ante tristique, elementum arcu id, tempus sapien.</p>
-<p>Say what the step will be</p>
-<pre><code class="language-javascript">function myFunction() {
-    let node = document.createElement(&#39;LI&#39;); // Create a &lt;li&gt; node
-    let textNode = document.createTextNode(&#39;Water&#39;); // Create a text node
-    node.appendChild(textNode); // Append the text to &lt;li&gt;
-    document.getElementById(&#39;myList&#39;).appendChild(node); // Append &lt;li&gt; to &lt;ul&gt; with id=&quot;myList&quot;
-}</code></pre>
-<p>And repeat</p>
-<pre><code>until finished</code></pre>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit amet aliquam ipsum. Pellentesque ac ante tristique, elementum arcu id, tempus sapien.</p>
-<h2 id="running-the-tests">Running the tests</h2>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit amet aliquam ipsum. Pellentesque ac ante tristique, elementum arcu id, tempus sapien.</p>
-<h3 id="break-down-into-end-to-end-tests">Break down into end to end tests</h3>
-<p>Explain what these tests test and why</p>
-<pre><code>Give an example</code></pre>
-<h3 id="and-coding-style-tests">And coding style tests</h3>
-<p>Explain what these tests test and why</p>
-<pre><code>Give an example</code></pre>
+					<h3 id="features">Features:</h3>
+<ul>
+<li>Features simple alert pop-ups, confirm dialouges and a larger modal</li>
+<li>Includes messages that slide in from the top right corner of the screen, which can be styled as Error messages, Success messages and more (See below for details)</li>
+<li>Choose from a Light and Dark CSS file</li>
+<li>Modern and responsive flat designs</li>
+<li>~1kb file size, meaning a fast component for any application</li>
+<li>Works on all major browsers (tested on Chrome, Firefox, Edge and more)</li>
+</ul>
+<h3 id="examples">Examples:</h3>
+<!-- TODO: Add Examples -->
+
+<h3 id="getting-started">Getting Started:</h3>
+<h6 id="installation">Installation</h6>
+<ul>
+<li><p>Install with NPM:</p>
+<pre><code class="language-shell">$ npm i @r-tek/alertpal</code></pre>
+<p>If you are using a bundler like Webpack, you can import the module:</p>
+<pre><code class="language-javascript">// ES6
+import alertpal from &#39;@r-tek/alertpal&#39;;
+
+// OR
+
+// CommonJs
+const alertpal = require(&#39;@r-tek/alertpal&#39;);</code></pre>
+<p>For now, you&#39;ll need to bring in the CSS file through one of the methods below.</p>
+</li>
+</ul>
+<br />
+
+<ul>
+<li><p>Using the CDN via JsDelivr:</p>
+<pre><code class="language-html">&lt;script&gt;
+    type=&quot;text/javascript&quot; src=&quot;https://cdn.jsdelivr.net/npm/@r-tek/alertpal@0.0.2/build/alertpal.min.js&quot;
+&lt;/script&gt;</code></pre>
+<p>Light-mode CSS File:</p>
+<pre><code class="language-html">&lt;link
+    rel=&quot;stylesheet&quot;
+    type=&quot;text/css&quot;
+    href=&quot;https://cdn.jsdelivr.net/npm/@r-tek/alertpal@0.0.2/build/alertpal_light.min.css&quot;
+/&gt;</code></pre>
+<p>Dark-mode CSS File:</p>
+<pre><code class="language-html">&lt;link
+    rel=&quot;stylesheet&quot;
+    type=&quot;text/css&quot;
+    href=&quot;https://cdn.jsdelivr.net/npm/@r-tek/alertpal@0.0.2/build/alertpal_dark.min.css&quot;
+/&gt;</code></pre>
+</li>
+</ul>
+<br />
+
+<ul>
+<li>Alternatively, you could clone/download the repository. Under the /build directory, include the <code>alertpal.min.js</code> and, either the <code>alertpal_light.min.css</code> or <code>alertpal_dark.min.css</code> in your project.</li>
+</ul>
+<h6 id="usage">Usage</h6>
+<pre><code class="language-html">&lt;!-- This will be used to trigger the alert --&gt;
+
+&lt;button id=&quot;myButton&quot;&gt;Trigger Alert&lt;/button&gt;
+
+&lt;script type=&quot;text/javascript&quot;&gt;
+    /*
+     * In most cases, calling the alert will require you pass a parameter
+     * The parameter will be be an object of optional properties
+     * These are different for each type of alert
+     * See the link below this code block for the API
+     */
+
+    // Here I define the object
+    const objectParam = {
+        title: &#39;My Alert&#39;,
+        description: &#39;This is my alert pop-up&#39;
+        cancel: &#39;OK&#39;
+    };
+
+    /*
+     * Below I then call the method on the Alertpal Object to create an alert
+     * I pass my object as the parameter
+     */
+
+    Alertpal.alert(objectParam);
+&lt;/script&gt;</code></pre>
+<!-- TODO: Add link to API Document -->
+
+<h3 id="types-of-alerts">Types of Alerts:</h3>
+<h6 id="simple-alert">Simple Alert</h6>
+<p><img src="./assets/img/simple_alert.png" alt="Simple Alert"></p>
+<h6 id="confirm-dialog">Confirm Dialog</h6>
+<p><img src="./assets/img/confirm_dialog.png" alt="Confirm Dialog"></p>
+<h6 id="modal">Modal</h6>
+<p><img src="./assets/img/modal.png" alt="Modal"></p>
+<h6 id="message">Message</h6>
+<p><img src="./assets/img/message_normal.png" alt="Normal">
+<img src="./assets/img/message_success.png" alt="Success">
+<img src="./assets/img/message_warn.png" alt="Warn">
+<img src="./assets/img/message_error.png" alt="Error"></p>
+<h3 id="api-information">API Information:</h3>
+<!-- TODO: Add API Information when the website is done -->
+
+<h3 id="changelog">Changelog:</h3>
+<p>You can check out the changelog for information on the latest updates here:</p>
+<p><a href="https://github.com/R-TEK/alertpal/blob/master/CHANGELOG.md">https://github.com/R-TEK/alertpal/blob/master/CHANGELOG.md</a></p>
+<h3 id="contribution">Contribution:</h3>
+<p>Read the contribution files for details on developing with the project. You can find the file here:</p>
+<p><a href="https://github.com/R-TEK/alertpal/blob/master/CONTRIBUTING.md">https://github.com/R-TEK/alertpal/blob/master/CONTRIBUTING.md</a></p>
+<p>You can also contribute by issuing any bugs you have found or ideas for new features/optimizations to improve the component. You can do this by going to the <a href="https://github.com/R-TEK/alertpal/issues">issues</a> page and posting your bug / feature. Once I have read the issue, I&#39;ll add it to a <a href="https://trello.com/b/LYLtyuFd">Trello</a> road map. With the road map you can vote for items I have added if you like that feature too, and you can view what has been accepted/rejected, what I&#39;m working on and what has been completed.</p>
+<h3 id="license">License:</h3>
+<p>The MIT License - see the link below for more details:</p>
+<p><a href="https://github.com/R-TEK/alertpal/blob/master/LICENSE">https://github.com/R-TEK/alertpal/blob/master/LICENSE</a></p>
+<hr>
+<p>&copy; <a href="https://github.com/R-TEK">R-TEK</a></p>
 
 				</div>
 			</section>

@@ -81,7 +81,7 @@ article.masthead {
 	padding-top: 150px;
 	padding-bottom: 100px;
 	color: white;
-	background: url(../img/bg-pattern.png), linear-gradient(to left, #0074fe, #043e84);
+	background: url(../assets/img/bg-pattern.png), linear-gradient(to left, #0074fe, #043e84);
 }
 
 article.masthead .header-content {
