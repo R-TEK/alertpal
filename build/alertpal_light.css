@@ -199,6 +199,7 @@
   overflow-wrap: break-word;
   pointer-events: auto;
   cursor: pointer;
+  z-index: 100;
   -webkit-animation: rollDown ease 0.2s;
   -moz-animation: rollDown ease 0.2s;
   -ms-animation: rollDown ease 0.2s;
