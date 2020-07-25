@@ -107,6 +107,7 @@
 		overflow-wrap: break-word;
 		pointer-events: auto;
 		cursor: pointer;
+		z-index: 100;
 		@include animation(rollDown ease 0.2s);
 		@include no-select;
 	}
