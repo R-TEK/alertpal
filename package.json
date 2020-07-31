@@ -1,15 +1,44 @@
 {
 	"name": "@r-tek/alertpal",
-	"version": "0.0.2",
-	"description": "",
+	"version": "2.0.0",
+	"description": "AlertPal, a lightweight JavaScript alerts system, offering regular alerts, confirm dialog, and side messages/notifications.",
+	"author": "R-TEK",
+	"homepage": "https://r-tek.github.io/alertpal/",
 	"main": "./build/alertpal.min.js",
+	"module": "./build/alertpal.min.js",
+	"unpkg": "./build/alertpal.min.js",
+	"browser": "./build/alertpal.min.js",
+	"license": "MIT",
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1",
+		"build": "gulp productionBuild",
 		"doc": "jsdoc -c jsdoc.json",
-		"gen": "node_modules/.bin/jsdoc --configure .jsdoc.json --verbose"
+		"gen": "node_modules/.bin/jsdoc --configure .jsdoc.json --verbose",
+		"test": "echo \"Error: no test specified\" && exit 1"
 	},
-	"author": "",
-	"license": "ISC",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/R-TEK/alertpal"
+	},
+	"bugs": {
+		"url": "https://github.com/R-TEK/alertpal/labels"
+	},
+	"keyboards": [
+		"alert",
+		"dialog",
+		"confirm",
+		"modal",
+		"javascript",
+		"html",
+		"css",
+		"lightweight",
+		"ui",
+		"ui-component",
+		"js",
+		"animation"
+	],
+	"files": [
+		"build/"
+	],
 	"devDependencies": {
 		"gulp": "^4.0.2",
 		"gulp-concat": "^2.6.1",
@@ -18,5 +47,6 @@
 		"gulp-uglify-es": "^2.0.0",
 		"gulp-uglifycss": "^1.1.0",
 		"jsdoc": "^3.6.4"
-	}
+	},
+	"dependencies": {}
 }

@@ -1,9 +1,7 @@
-<!-- TODO: Change links to the alertpal website not the color picker website -->
 <h1 align="center" style="color: rgb(7, 128, 228)">
-    <a href="https://r-tek.github.io/colr_pickr/" target="blank">
+    <a href="https://r-tek.github.io/alertpal/" target="blank">
         <img height="240" src="./assets/img/interface_view.png"/>
         <br />
-        <!-- TODO: Change color -->
         AlertPal
     </a>
 </h1>
@@ -22,7 +20,7 @@
     <a href="https://www.npmjs.com/package/@r-tek/alertpal">
         <img src="https://badgen.net/npm/v/@r-tek/alertpal?color=7000c5" alt="version" />
     </a>
-    <a href="https://bundlephobia.com/result?p=@r-tek/alertpal@0.0.2">
+    <a href="https://bundlephobia.com/result?p=@r-tek/alertpal@2.0.0">
         <img src="https://badgen.net/bundlephobia/minzip/@r-tek/alertpal?color=158fcc" alt="minzip size" />
     </a>
     <a href="https://lgtm.com/projects/g/R-TEK/alertpal/context:javascript">
@@ -45,7 +43,8 @@
 
 ### Examples:
 
-<!-- TODO: Add Examples -->
+-   https://r-tek.github.io/alertpal/get-started.html
+-   https://codepen.io/TEK-Projects/pen/XWXvNKP
 
 ### Getting Started:
 
@@ -77,7 +76,7 @@
 
     ```html
     <script>
-    	type="text/javascript" src="https://cdn.jsdelivr.net/npm/@r-tek/alertpal@0.0.2/build/alertpal.min.js"
+    	type="text/javascript" src="https://cdn.jsdelivr.net/npm/@r-tek/alertpal@2.0.0/build/alertpal.min.js"
     </script>
     ```
 
@@ -87,7 +86,7 @@
     <link
     	rel="stylesheet"
     	type="text/css"
-    	href="https://cdn.jsdelivr.net/npm/@r-tek/alertpal@0.0.2/build/alertpal_light.min.css"
+    	href="https://cdn.jsdelivr.net/npm/@r-tek/alertpal@2.0.0/build/alertpal_light.min.css"
     />
     ```
 
@@ -97,7 +96,7 @@
     <link
     	rel="stylesheet"
     	type="text/css"
-    	href="https://cdn.jsdelivr.net/npm/@r-tek/alertpal@0.0.2/build/alertpal_dark.min.css"
+    	href="https://cdn.jsdelivr.net/npm/@r-tek/alertpal@2.0.0/build/alertpal_dark.min.css"
     />
     ```
 
@@ -136,8 +135,6 @@
 </script>
 ```
 
-<!-- TODO: Add link to API Document -->
-
 ### Types of Alerts:
 
 ###### Simple Alert
@@ -161,7 +158,9 @@
 
 ### API Information:
 
-<!-- TODO: Add API Information when the website is done -->
+For full documentation on how to use the AlertPal function, follow the link belw to the AlertPal API:
+
+https://r-tek.github.io/alertpal/documentation.html
 
 ### Changelog:
 
