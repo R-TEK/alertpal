@@ -52,15 +52,17 @@
 
 	#ap_title {
 		margin: 0;
-		font-family: $font;
-		font-size: 25px;
+		font-family: $font !important;
+		font-size: 25px !important;
+		font-weight: 600 !important;
 		color: $dark-text;
 	}
 
 	#ap_description {
-		margin: 25px 0;
-		font-family: $font;
-		font-size: 16px;
+		margin: 25px 0 !important;
+		font-family: $font !important;
+		font-size: 16px !important;
+		font-weight: 400 !important;
 		color: $light-text;
 	}
 
