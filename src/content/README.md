@@ -1,3 +1,29 @@
+<p align="center">
+    <b>AlertPal, a lightweight JavaScript alerts system, offering regular alerts, confirm dialogs, and side messages/notifications.</b>
+</p>
+
+<p align="center">
+    <a href="https://github.com/R-TEK/alertpal/blob/master/LICENSE">
+        <img src="https://badgen.net/github/license/R-TEK/alertpal?color=ff0000" alt="license" />
+    </a>
+    <a href="https://github.com/R-TEK/alertpal/graphs/contributors">
+        <img src="https://badgen.net/badge/maintained/Yes?color=008c17" alt="maintained" />
+    </a>
+    <a href="https://www.npmjs.com/package/@r-tek/alertpal">
+        <img src="https://badgen.net/npm/v/@r-tek/alertpal?color=7000c5" alt="version" />
+    </a>
+    <a href="https://bundlephobia.com/result?p=@r-tek/alertpal@2.0.0">
+        <img src="https://badgen.net/bundlephobia/minzip/@r-tek/alertpal?color=158fcc" alt="minzip size" />
+    </a>
+    <a href="https://lgtm.com/projects/g/R-TEK/alertpal/context:javascript">
+        <img alt="Language grade: JavaScript" src="https://img.shields.io/lgtm/grade/javascript/g/R-TEK/alertpal.svg?logo=lgtm&logoWidth=18" alt="lgtm code quality" />
+    </a>
+</p>
+
+<br/>
+
+---
+
 ### Features:
 
 -   Features simple alert pop-ups, confirm dialouges and a larger modal
@@ -9,7 +35,8 @@
 
 ### Examples:
 
-<!-- TODO: Add Examples -->
+-   https://r-tek.github.io/alertpal/get-started.html
+-   https://codepen.io/TEK-Projects/pen/XWXvNKP
 
 ### Getting Started:
 
@@ -41,7 +68,7 @@
 
     ```html
     <script>
-    	type="text/javascript" src="https://cdn.jsdelivr.net/npm/@r-tek/alertpal@0.0.2/build/alertpal.min.js"
+    	type="text/javascript" src="https://cdn.jsdelivr.net/npm/@r-tek/alertpal@2.0.0/build/alertpal.min.js"
     </script>
     ```
 
@@ -51,7 +78,7 @@
     <link
     	rel="stylesheet"
     	type="text/css"
-    	href="https://cdn.jsdelivr.net/npm/@r-tek/alertpal@0.0.2/build/alertpal_light.min.css"
+    	href="https://cdn.jsdelivr.net/npm/@r-tek/alertpal@2.0.0/build/alertpal_light.min.css"
     />
     ```
 
@@ -61,7 +88,7 @@
     <link
     	rel="stylesheet"
     	type="text/css"
-    	href="https://cdn.jsdelivr.net/npm/@r-tek/alertpal@0.0.2/build/alertpal_dark.min.css"
+    	href="https://cdn.jsdelivr.net/npm/@r-tek/alertpal@2.0.0/build/alertpal_dark.min.css"
     />
     ```
 
@@ -100,8 +127,6 @@
 </script>
 ```
 
-<!-- TODO: Add link to API Document -->
-
 ### Types of Alerts:
 
 ###### Simple Alert
@@ -125,7 +150,9 @@
 
 ### API Information:
 
-<!-- TODO: Add API Information when the website is done -->
+For full documentation on how to use the AlertPal function, follow the link belw to the AlertPal API:
+
+https://r-tek.github.io/alertpal/documentation.html
 
 ### Changelog:
 

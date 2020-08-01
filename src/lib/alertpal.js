@@ -1,3 +1,13 @@
+/**!
+ * AlertPal
+ *
+ * R-TEK
+ *
+ * https://github.com/R-TEK/alertpal
+ *
+ * MIT License
+ */
+
 /**
  * Creation of the Alertpal Object
  *
