@@ -1,13 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Get Started - Template</title>
-		<!-- TODO: Fill in meta -->
+		<title>Get Started - AlertPal</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-		<meta name="description" content="placeholder" />
-		<meta name="author" content="" />
-		<meta name="keywords" content="" />
+		<meta
+			name="description"
+			content="AlertPal, a lightweight JavaScript alerts system, offering regular alerts, confirm dialog, and side messages/notifications.|
+		"
+		/>
+		<meta name="author" content="R-TEK" />
+		<meta
+			name="keywords"
+			content="alert, dialog, confirm, modal, javascript, html, css, lightweight, ui, ui-component, js, animation"
+		/>
+
+		<!-- Favicon -->
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/img/apple-touch-icon.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="./assets/img/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="./assets/img/favicon-16x16.png" />
+		<link rel="manifest" href="./assets/img/site.webmanifest" />
 
 		<!-- CSS Files -->
 		<link type="text/css" rel="stylesheet" href="./dist/lib.css" />
@@ -19,7 +31,7 @@
 		<!-- Nav Bar -->
 		<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
 			<div class="container">
-				<a class="navbar-brand js-scroll-trigger" href="#page-top">Template</a>
+				<a class="navbar-brand js-scroll-trigger" href="#page-top">AlertPal</a>
 				<button
 					class="navbar-toggler navbar-toggler-right"
 					type="button"
@@ -54,8 +66,699 @@
 		<!-- Documentation Main Body -->
 		<article id="article">
 			<div class="markdown-body">
-				<!-- TODO: Replace if needed -->
-				JsDoc Documentation
+				<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<script src="scripts/prettify/prettify.js"></script>
+		<script src="scripts/prettify/lang-css.js"></script>
+		<!--[if lt IE 9]>
+			<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css" />
+		<link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css" />
+	</head>
+
+	<body>
+		<div id="main">
+			<section>
+				<header>
+					<h2>Alertpal</h2>
+				</header>
+
+				<article>
+					<div class="container-overview">
+						<div class="description"><p>Creation of the Alertpal Object</p></div>
+
+						<dl class="details">
+							<dt class="tag-source">Source:</dt>
+							<dd class="tag-source">
+								<ul class="dummy">
+									<li>
+										<a href="setup.js.html">setup.js</a>,
+										<a href="setup.js.html#line11">line 11</a>
+									</li>
+								</ul>
+							</dd>
+						</dl>
+					</div>
+
+					<h3 class="subsection-title">Methods</h3>
+
+					<h4 class="name" id=".alert">
+						<span class="type-signature">(static) </span>alert<span class="signature"
+							>(details<span class="signature-attributes">opt</span>)</span
+						><span class="type-signature"></span>
+					</h4>
+
+					<div class="description">
+						<p>Function to configure and display the 'alert' style Alertpal</p>
+					</div>
+
+					<h5>Parameters:</h5>
+
+					<table class="params">
+						<thead>
+							<tr>
+								<th>Name</th>
+
+								<th>Type</th>
+
+								<th>Attributes</th>
+
+								<th class="last">Description</th>
+							</tr>
+						</thead>
+
+						<tbody>
+							<tr>
+								<td class="name"><code>details</code></td>
+
+								<td class="type">
+									<span class="param-type">object</span>
+								</td>
+
+								<td class="attributes">&lt;optional><br /></td>
+
+								<td class="description last">
+									<p>
+										Object to define the configuration of the alert (Optional -
+										details of defaults below)
+									</p>
+									<h6>Properties</h6>
+
+									<table class="params">
+										<thead>
+											<tr>
+												<th>Name</th>
+
+												<th>Type</th>
+
+												<th>Attributes</th>
+
+												<th class="last">Description</th>
+											</tr>
+										</thead>
+
+										<tbody>
+											<tr>
+												<td class="name"><code>title</code></td>
+
+												<td class="type">
+													<span class="param-type">string</span>
+												</td>
+
+												<td class="attributes">&lt;optional><br /></td>
+
+												<td class="description last">
+													<p>
+														The title of the alert (Optional - default
+														is 'Alert')
+													</p>
+												</td>
+											</tr>
+
+											<tr>
+												<td class="name"><code>description</code></td>
+
+												<td class="type">
+													<span class="param-type">string</span>
+												</td>
+
+												<td class="attributes">&lt;optional><br /></td>
+
+												<td class="description last">
+													<p>
+														The description of the alert. String can
+														also include HTML for formatting (Optional -
+														default is no description)
+													</p>
+												</td>
+											</tr>
+
+											<tr>
+												<td class="name"><code>cancel</code></td>
+
+												<td class="type">
+													<span class="param-type">string</span>
+												</td>
+
+												<td class="attributes">&lt;optional><br /></td>
+
+												<td class="description last">
+													<p>
+														The text inside the cancel button (Optional
+														- default is 'Return')
+													</p>
+												</td>
+											</tr>
+
+											<tr>
+												<td class="name"><code>cancelCallback</code></td>
+
+												<td class="type">
+													<span class="param-type">function</span>
+												</td>
+
+												<td class="attributes">&lt;optional><br /></td>
+
+												<td class="description last">
+													<p>
+														Callback function to trigger when the cancel
+														button is pressed (Option - default is
+														closing the alert box)
+													</p>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<dl class="details">
+						<dt class="tag-source">Source:</dt>
+						<dd class="tag-source">
+							<ul class="dummy">
+								<li>
+									<a href="alert.js.html">alert.js</a>,
+									<a href="alert.js.html#line1">line 1</a>
+								</li>
+							</ul>
+						</dd>
+					</dl>
+
+					<h5>Example</h5>
+
+					<pre class="prettyprint"><code>const config = {
+  title: 'New alert',
+  description: 'This is a alert pop up',
+  cancel: 'Go back',
+	 cancelCallback: returnToPage
+};
+
+Alertpal.alert(config);</code></pre>
+
+					<h4 class="name" id=".confirm">
+						<span class="type-signature">(static) </span>confirm<span class="signature"
+							>(details)</span
+						><span class="type-signature"></span>
+					</h4>
+
+					<div class="description">
+						<p>Function to configure and display the 'confirm' style Alertpal</p>
+					</div>
+
+					<h5>Parameters:</h5>
+
+					<table class="params">
+						<thead>
+							<tr>
+								<th>Name</th>
+
+								<th>Type</th>
+
+								<th class="last">Description</th>
+							</tr>
+						</thead>
+
+						<tbody>
+							<tr>
+								<td class="name"><code>details</code></td>
+
+								<td class="type">
+									<span class="param-type">object</span>
+								</td>
+
+								<td class="description last">
+									<p>Object to define the configuration of the confirm</p>
+									<h6>Properties</h6>
+
+									<table class="params">
+										<thead>
+											<tr>
+												<th>Name</th>
+
+												<th>Type</th>
+
+												<th>Attributes</th>
+
+												<th class="last">Description</th>
+											</tr>
+										</thead>
+
+										<tbody>
+											<tr>
+												<td class="name"><code>title</code></td>
+
+												<td class="type">
+													<span class="param-type">string</span>
+												</td>
+
+												<td class="attributes">&lt;optional><br /></td>
+
+												<td class="description last">
+													<p>
+														The title of the alert (Optional - default
+														is 'Alert')
+													</p>
+												</td>
+											</tr>
+
+											<tr>
+												<td class="name"><code>description</code></td>
+
+												<td class="type">
+													<span class="param-type">string</span>
+												</td>
+
+												<td class="attributes">&lt;optional><br /></td>
+
+												<td class="description last">
+													<p>
+														The description of the alert. String can
+														also include HTML for formatting (Optional -
+														default is no description)
+													</p>
+												</td>
+											</tr>
+
+											<tr>
+												<td class="name"><code>cancel</code></td>
+
+												<td class="type">
+													<span class="param-type">string</span>
+												</td>
+
+												<td class="attributes">&lt;optional><br /></td>
+
+												<td class="description last">
+													<p>
+														The text inside the cancel/return button
+														(Optional - default is 'Return')
+													</p>
+												</td>
+											</tr>
+
+											<tr>
+												<td class="name"><code>ok</code></td>
+
+												<td class="type">
+													<span class="param-type">string</span>
+												</td>
+
+												<td class="attributes">&lt;optional><br /></td>
+
+												<td class="description last">
+													<p>
+														The text inside the the ok button (Option -
+														default is 'OK')
+													</p>
+												</td>
+											</tr>
+
+											<tr>
+												<td class="name"><code>okCallback</code></td>
+
+												<td class="type">
+													<span class="param-type">function</span>
+												</td>
+
+												<td class="attributes"></td>
+
+												<td class="description last">
+													<p>
+														The callback you want to be triggered when
+														the ok button is clicked
+													</p>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<dl class="details">
+						<dt class="tag-source">Source:</dt>
+						<dd class="tag-source">
+							<ul class="dummy">
+								<li>
+									<a href="confirm.js.html">confirm.js</a>,
+									<a href="confirm.js.html#line1">line 1</a>
+								</li>
+							</ul>
+						</dd>
+					</dl>
+
+					<h5>Example</h5>
+
+					<pre class="prettyprint"><code>const config = {
+  title: 'Delete Item',
+  description: 'Are you sure you want to delete this item?',
+  cancel: 'No',
+  ok: 'Yes',
+  okCallback: deleteItemFunction
+};
+
+Alertpal.confirm(config);</code></pre>
+
+					<h4 class="name" id=".message">
+						<span class="type-signature">(static) </span>message<span class="signature"
+							>(type<span class="signature-attributes">opt</span>, details<span
+								class="signature-attributes"
+								>opt</span
+							>)</span
+						><span class="type-signature"></span>
+					</h4>
+
+					<div class="description">
+						<p>Function to configure and display the 'message' style Alertpals</p>
+					</div>
+
+					<h5>Parameters:</h5>
+
+					<table class="params">
+						<thead>
+							<tr>
+								<th>Name</th>
+
+								<th>Type</th>
+
+								<th>Attributes</th>
+
+								<th class="last">Description</th>
+							</tr>
+						</thead>
+
+						<tbody>
+							<tr>
+								<td class="name"><code>type</code></td>
+
+								<td class="type">
+									<span class="param-type">string</span>
+								</td>
+
+								<td class="attributes">&lt;optional><br /></td>
+
+								<td class="description last">
+									<p>
+										Define what type of message 'normal' / 'success' / 'warn' /
+										'error' (Optional - default is 'normal')
+									</p>
+								</td>
+							</tr>
+
+							<tr>
+								<td class="name"><code>details</code></td>
+
+								<td class="type">
+									<span class="param-type">object</span>
+								</td>
+
+								<td class="attributes">&lt;optional><br /></td>
+
+								<td class="description last">
+									<p>
+										Object to define the configuration of the alert (Optional -
+										details of defaults below)
+									</p>
+									<h6>Properties</h6>
+
+									<table class="params">
+										<thead>
+											<tr>
+												<th>Name</th>
+
+												<th>Type</th>
+
+												<th>Attributes</th>
+
+												<th class="last">Description</th>
+											</tr>
+										</thead>
+
+										<tbody>
+											<tr>
+												<td class="name"><code>message</code></td>
+
+												<td class="type">
+													<span class="param-type">string</span>
+												</td>
+
+												<td class="attributes">&lt;optional><br /></td>
+
+												<td class="description last">
+													<p>
+														The message for the alert (Optional -
+														default is 'Alert')
+													</p>
+												</td>
+											</tr>
+
+											<tr>
+												<td class="name"><code>timeout</code></td>
+
+												<td class="type">
+													<span class="param-type">number</span>
+												</td>
+
+												<td class="attributes">&lt;optional><br /></td>
+
+												<td class="description last">
+													<p>
+														The time(milliseconds) on how long the alert
+														should stay on screen (Optional - default is
+														5 seconds)
+													</p>
+												</td>
+											</tr>
+
+											<tr>
+												<td class="name"><code>callback</code></td>
+
+												<td class="type">
+													<span class="param-type">function</span>
+												</td>
+
+												<td class="attributes">&lt;optional><br /></td>
+
+												<td class="description last">
+													<p>
+														The callback to be triggered if click is
+														fired on the message (Optional - default is
+														to remove the message)
+													</p>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<dl class="details">
+						<dt class="tag-source">Source:</dt>
+						<dd class="tag-source">
+							<ul class="dummy">
+								<li>
+									<a href="message.js.html">message.js</a>,
+									<a href="message.js.html#line1">line 1</a>
+								</li>
+							</ul>
+						</dd>
+					</dl>
+
+					<h5>Example</h5>
+
+					<pre class="prettyprint"><code>const config = {
+  message: 'Warning, you cant do that!',
+  timeout: 10000
+};
+
+Alertpal.message('warn', config);</code></pre>
+
+					<h4 class="name" id=".modal">
+						<span class="type-signature">(static) </span>modal<span class="signature"
+							>(details<span class="signature-attributes">opt</span>)</span
+						><span class="type-signature"></span>
+					</h4>
+
+					<div class="description">
+						<p>Function to configure and display the 'alert' style Alertpal</p>
+					</div>
+
+					<h5>Parameters:</h5>
+
+					<table class="params">
+						<thead>
+							<tr>
+								<th>Name</th>
+
+								<th>Type</th>
+
+								<th>Attributes</th>
+
+								<th class="last">Description</th>
+							</tr>
+						</thead>
+
+						<tbody>
+							<tr>
+								<td class="name"><code>details</code></td>
+
+								<td class="type">
+									<span class="param-type">object</span>
+								</td>
+
+								<td class="attributes">&lt;optional><br /></td>
+
+								<td class="description last">
+									<p>
+										Object to define the configuration of the alert (Optional -
+										details of defaults below)
+									</p>
+									<h6>Properties</h6>
+
+									<table class="params">
+										<thead>
+											<tr>
+												<th>Name</th>
+
+												<th>Type</th>
+
+												<th>Attributes</th>
+
+												<th class="last">Description</th>
+											</tr>
+										</thead>
+
+										<tbody>
+											<tr>
+												<td class="name"><code>title</code></td>
+
+												<td class="type">
+													<span class="param-type">string</span>
+												</td>
+
+												<td class="attributes">&lt;optional><br /></td>
+
+												<td class="description last">
+													<p>
+														The title of the alert (Optional - default
+														is 'Alert')
+													</p>
+												</td>
+											</tr>
+
+											<tr>
+												<td class="name"><code>description</code></td>
+
+												<td class="type">
+													<span class="param-type">string</span>
+												</td>
+
+												<td class="attributes">&lt;optional><br /></td>
+
+												<td class="description last">
+													<p>
+														The description of the alert. String can
+														also include HTML for formatting (Optional -
+														default is no description)
+													</p>
+												</td>
+											</tr>
+
+											<tr>
+												<td class="name"><code>cancel</code></td>
+
+												<td class="type">
+													<span class="param-type">string</span>
+												</td>
+
+												<td class="attributes">&lt;optional><br /></td>
+
+												<td class="description last">
+													<p>
+														The text inside the cancel button (Optional
+														- default is 'Return')
+													</p>
+												</td>
+											</tr>
+
+											<tr>
+												<td class="name"><code>ok</code></td>
+
+												<td class="type">
+													<span class="param-type">string</span>
+												</td>
+
+												<td class="attributes">&lt;optional><br /></td>
+
+												<td class="description last">
+													<p>
+														The text inside the the ok button (Option -
+														default is 'OK')
+													</p>
+												</td>
+											</tr>
+
+											<tr>
+												<td class="name"><code>okCallback</code></td>
+
+												<td class="type">
+													<span class="param-type">function</span>
+												</td>
+
+												<td class="attributes">&lt;optional><br /></td>
+
+												<td class="description last">
+													<p>
+														The callback you want to be triggered when
+														the ok button is clicked (Optional - default
+														is no action)
+													</p>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<dl class="details">
+						<dt class="tag-source">Source:</dt>
+						<dd class="tag-source">
+							<ul class="dummy">
+								<li>
+									<a href="modal.js.html">modal.js</a>,
+									<a href="modal.js.html#line1">line 1</a>
+								</li>
+							</ul>
+						</dd>
+					</dl>
+
+					<h5>Example</h5>
+
+					<pre class="prettyprint"><code>const config = {
+  title: 'Read the rules of the Application',
+  description: 'Rules...',
+  cancel: 'Decline',
+  ok: 'Accept',
+  okCallback: acceptFunction
+};
+
+Alertpal.modal(config);</code></pre>
+				</article>
+			</section>
+		</div>
+		<script src="scripts/linenumber.js"></script>
+	</body>
+</html>
 
 			</div>
 		</article>
