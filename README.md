@@ -39,7 +39,7 @@
 -   Choose from a Light and Dark CSS file
 -   Modern and responsive flat designs
 -   ~1kb file size, meaning a fast component for any application
--   Works on all major browsers (tested on Chrome, Firefox, Edge and more)
+-   Works on all major browsers
 
 ### Examples:
 
