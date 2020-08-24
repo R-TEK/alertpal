@@ -50,22 +50,17 @@ document.addEventListener('DOMContentLoaded', function () {
 	document.getElementsByTagName('BODY')[0].appendChild(HTMLWrapper);
 
 	// Defining some event listeners
-	document.getElementById('alertpal_bg').addEventListener('click', closeAlert);
-	document.getElementById('ap_cancel').addEventListener('click', closeAlert);
+	document.getElementById('alertpal_bg').addEventListener('click', Alertpal.closeAlert);
+	document.getElementById('ap_cancel').addEventListener('click', Alertpal.closeAlert);
 });
 
-/**
- * Function to close an alert / confirm / modal boxes
- *
- * @function
- */
-function closeAlert() {
+Alertpal.closeAlert = function () {
 	// Hiding the alert
 	document.getElementById('alertpal_alert').style.display = 'none';
 	document.getElementById('alertpal_bg').style.display = 'none';
 	// Removing potential modal CSS class
 	document.getElementById('alertpal_alert').removeAttribute('class');
-}
+};
 
 /**
  * Function to configure and display the 'alert' style Alertpal
@@ -89,6 +84,7 @@ function closeAlert() {
  * Alertpal.alert(config);
  */
 Alertpal.alert = function (details) {
+	console.log(details.cancelCallback);
 	// The user doesn't have to pass details, so if they don't I define details here to avoid errors
 	if (details === undefined) details = {};
 
@@ -106,14 +102,19 @@ Alertpal.alert = function (details) {
 	desc.innerHTML = details.description === undefined ? '' : details.description;
 	cancel.innerHTML = details.cancel === undefined ? 'Return' : details.cancel;
 	ok.innerHTML = details.ok === undefined ? 'OK' : details.ok;
-	cancel.onclick = function () {
-		closeAlert();
-		details.cancelCallback();
-	};
+	cancel.onclick =
+		details.cancelCallback === undefined
+			? function () {
+					Alertpal.closeAlert();
+			  }
+			: function () {
+					Alertpal.closeAlert();
+					details.cancelCallback();
+			  };
 	details.okCallback === undefined
 		? (ok.style.display = 'none')
 		: (ok.onclick = function () {
-				closeAlert();
+				Alertpal.closeAlert();
 				details.okCallback();
 		  });
 
@@ -146,7 +147,6 @@ Alertpal.alert = function (details) {
  * Alertpal.confirm(config);
  */
 Alertpal.confirm = function (details) {
-	console.log(details.okCallback);
 	// Error handling, if no parameter is specified
 	if (details === undefined)
 		throw 'To use the confirm method, you must pass the "details" parameter';

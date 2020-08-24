@@ -20,6 +20,7 @@
  * Alertpal.alert(config);
  */
 Alertpal.alert = function (details) {
+	console.log(details.cancelCallback);
 	// The user doesn't have to pass details, so if they don't I define details here to avoid errors
 	if (details === undefined) details = {};
 
@@ -37,14 +38,19 @@ Alertpal.alert = function (details) {
 	desc.innerHTML = details.description === undefined ? '' : details.description;
 	cancel.innerHTML = details.cancel === undefined ? 'Return' : details.cancel;
 	ok.innerHTML = details.ok === undefined ? 'OK' : details.ok;
-	cancel.onclick = function () {
-		closeAlert();
-		details.cancelCallback();
-	};
+	cancel.onclick =
+		details.cancelCallback === undefined
+			? function () {
+					Alertpal.closeAlert();
+			  }
+			: function () {
+					Alertpal.closeAlert();
+					details.cancelCallback();
+			  };
 	details.okCallback === undefined
 		? (ok.style.display = 'none')
 		: (ok.onclick = function () {
-				closeAlert();
+				Alertpal.closeAlert();
 				details.okCallback();
 		  });
 

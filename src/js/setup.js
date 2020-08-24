@@ -50,19 +50,14 @@ document.addEventListener('DOMContentLoaded', function () {
 	document.getElementsByTagName('BODY')[0].appendChild(HTMLWrapper);
 
 	// Defining some event listeners
-	document.getElementById('alertpal_bg').addEventListener('click', closeAlert);
-	document.getElementById('ap_cancel').addEventListener('click', closeAlert);
+	document.getElementById('alertpal_bg').addEventListener('click', Alertpal.closeAlert);
+	document.getElementById('ap_cancel').addEventListener('click', Alertpal.closeAlert);
 });
 
-/**
- * Function to close an alert / confirm / modal boxes
- *
- * @function
- */
-function closeAlert() {
+Alertpal.closeAlert = function () {
 	// Hiding the alert
 	document.getElementById('alertpal_alert').style.display = 'none';
 	document.getElementById('alertpal_bg').style.display = 'none';
 	// Removing potential modal CSS class
 	document.getElementById('alertpal_alert').removeAttribute('class');
-}
+};
