@@ -201,7 +201,6 @@
   position: relative;
   margin: 5px 5px 10px 5px;
   padding: 10px 20px;
-  width: 210px;
   border-radius: 2px;
   box-shadow: 0 0 10px 0 rgba(1, 1, 1, 0.2);
   font-family: Arial;
@@ -223,7 +222,7 @@
   -ms-user-select: none; }
 
 #alertpal .success {
-  background-color: #1aad47;
+  background-color: #008000;
   color: #fff; }
 
 #alertpal .warn {

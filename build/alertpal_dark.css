@@ -128,7 +128,7 @@
   max-height: 60%;
   top: 20%;
   left: calc(50% - 225px);
-  background-color: #333;
+  background-color: #fff;
   border-radius: 5px;
   box-shadow: 0 0 10px 0 rgba(1, 1, 1, 0.2);
   overflow-y: auto;
@@ -146,18 +146,18 @@
   top: 10% !important; }
 
 #alertpal #ap_title {
-  margin: 0 !important;
+  margin: 0;
   font-family: Arial, Helvetica, sans-serif !important;
   font-size: 25px !important;
   font-weight: 600 !important;
-  color: #fff; }
+  color: #111; }
 
 #alertpal #ap_description {
   margin: 25px 0 !important;
   font-family: Arial, Helvetica, sans-serif !important;
   font-size: 16px !important;
   font-weight: 400 !important;
-  color: #fff; }
+  color: #555; }
 
 #alertpal #ap_buttons {
   float: right; }
@@ -182,26 +182,25 @@
   -ms-user-select: none; }
 
 #alertpal #ap_cancel {
-  background: none; }
+  background: none;
+  color: #444; }
 
 #alertpal #ap_cancel:hover {
-  background-color: #4d4d4d; }
+  background-color: #e6e6e6; }
 
 #alertpal #ap_ok:hover {
-  background-color: #27a3de; }
+  background-color: #15648a; }
 
 #alertpal #alertpal_message_container {
   position: fixed;
   top: 0;
   right: 0;
-  pointer-events: none;
   z-index: 9999999999999999; }
 
 #alertpal .ap_message {
   position: relative;
   margin: 5px 5px 10px 5px;
   padding: 10px 20px;
-  width: 250px;
   border-radius: 2px;
   box-shadow: 0 0 10px 0 rgba(1, 1, 1, 0.2);
   font-family: Arial;
@@ -223,7 +222,7 @@
   -ms-user-select: none; }
 
 #alertpal .success {
-  background-color: #1aad47;
+  background-color: #008000;
   color: #fff; }
 
 #alertpal .warn {
@@ -235,8 +234,30 @@
   color: #fff; }
 
 #alertpal .normal {
-  background-color: #333;
-  color: #fff; }
+  background-color: #f6f8fa;
+  color: #111; }
+
+/*
+ * Dark Style Sheet
+ */
+#alertpal_alert {
+  background-color: #333 !important; }
+
+#ap_title {
+  color: #fff !important; }
+
+#ap_description {
+  color: #fff !important; }
+
+#ap_cancel {
+  color: #fff !important; }
+
+#ap_cancel:hover {
+  background-color: #575757 !important; }
+
+.normal {
+  background-color: #333 !important;
+  color: #fff !important; }
 
 /*
  * Media Queries

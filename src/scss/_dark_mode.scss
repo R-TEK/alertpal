@@ -1,0 +1,28 @@
+/*
+ * Dark Style Sheet
+ */
+
+#alertpal_alert {
+	background-color: $dark_bg !important;
+}
+
+#ap_title {
+	color: #fff !important;
+}
+
+#ap_description {
+	color: #fff !important;
+}
+
+#ap_cancel {
+	color: #fff !important;
+}
+
+#ap_cancel:hover {
+	background-color: #575757 !important;
+}
+
+.normal {
+	background-color: $dark_bg !important;
+	color: #fff !important;
+}

@@ -34,7 +34,7 @@
 		max-height: 60%;
 		top: 20%;
 		left: calc(50% - 225px);
-		background-color: $dark_bg;
+		background-color: #fff;
 		border-radius: 5px;
 		box-shadow: $shadow;
 		overflow-y: auto;
@@ -51,11 +51,11 @@
 	}
 
 	#ap_title {
-		margin: 0 !important;
+		margin: 0;
 		font-family: $font !important;
 		font-size: 25px !important;
 		font-weight: 600 !important;
-		color: #fff;
+		color: $dark-text;
 	}
 
 	#ap_description {
@@ -63,7 +63,7 @@
 		font-family: $font !important;
 		font-size: 16px !important;
 		font-weight: 400 !important;
-		color: #fff;
+		color: $light-text;
 	}
 
 	#ap_buttons {
@@ -88,21 +88,21 @@
 
 	#ap_cancel {
 		background: none;
+		color: #444;
 	}
 
 	#ap_cancel:hover {
-		background-color: lighten($dark_bg, 10%);
+		background-color: darken(#fff, 10%);
 	}
 
 	#ap_ok:hover {
-		background-color: lighten($primary-color, 10%);
+		background-color: darken($primary-color, 10%);
 	}
 
 	#alertpal_message_container {
 		position: fixed;
 		top: 0;
 		right: 0;
-		pointer-events: none;
 		z-index: 9999999999999999;
 	}
 
@@ -110,7 +110,6 @@
 		position: relative;
 		margin: 5px 5px 10px 5px;
 		padding: 10px 20px;
-		width: 250px;
 		border-radius: 2px;
 		box-shadow: $shadow;
 		font-family: Arial;
@@ -141,10 +140,13 @@
 	}
 
 	.normal {
-		background-color: $dark_bg;
-		color: #fff;
+		background-color: $light-grey;
+		color: $dark-text;
 	}
 }
+
+// Importing dark mode file
+@import 'dark_mode';
 
 /*
  * Media Queries

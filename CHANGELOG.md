@@ -1,5 +1,11 @@
 # Changelog
 
+### 2.1.0
+
+-   Changed color of success message
+
+-   Added padding to messages and removed width to give them a dynamic width
+
 ### 2.0.0 - Rebuild
 
 -   Added more alert types than the existing (simple alert, confirm dialog). I added a modal, side messages for normal messages, success, warnings, errors
