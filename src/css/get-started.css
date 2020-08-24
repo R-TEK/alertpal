@@ -57,6 +57,10 @@ article {
 	left: 20%;
 }
 
+.example_btn {
+	margin: 5px !important;
+}
+
 @media only screen and (max-width: 900px) {
 	article {
 		position: relative;
