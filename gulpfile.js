@@ -4,13 +4,17 @@
 
 // Importing required dependencies
 const gulp = require('gulp');
+const clean = require('gulp-rimraf');
 const concatJS = require('gulp-concat');
 const uglifyJS = require('gulp-uglify-es').default;
 const concatCSS = require('gulp-concat-css');
 const uglifyCSS = require('gulp-uglifycss');
 const sass = require('gulp-sass');
-
 sass.compiler = require('node-sass');
+
+/**
+ * DEV BUILD
+ */
 
 // Moving, concatenating and minifying my own script (.js) files - DEV BUILD
 gulp.task('devScripts', async function () {
@@ -22,6 +26,15 @@ gulp.task('devScripts', async function () {
 // Compiling SASS and minifying files - DEV BUILD
 gulp.task('devSass', async function () {
 	gulp.src('src/scss/*.scss').pipe(sass().on('error', sass.logError)).pipe(gulp.dest('build'));
+});
+
+/**
+ * PRODUCTION BUILD
+ */
+
+// Clearing all files in the ./build directory before making the build - PRODUCTION BUILD
+gulp.task('productionClean', async function () {
+	gulp.src('./build', { read: false }).pipe(clean());
 });
 
 // Moving, concatenating and minifying my own script (.js) files - PRODUCTION BUILD
@@ -59,14 +72,8 @@ gulp.task('watch', function () {
 // Combining multiple tasks into one build - DEV BUILD
 gulp.task('devBuild', gulp.series('devScripts', 'devSass'));
 
-// Combining multiple tasks into one build - DEV BUILD
+// Combining multiple tasks into one build - PRODUCTION BUILD
 gulp.task(
 	'productionBuild',
-	gulp.series(
-		'productionScripts',
-		'productionSassLight',
-		'productionSassDark',
-		'devScripts',
-		'devSass'
-	)
+	gulp.series('productionClean', 'productionScripts', 'productionSassLight', 'productionSassDark')
 );
