@@ -1,8 +1,8 @@
 # Contribution Details
 
-For information on features, optimizations and bugs states, check out the Colr Pickr project Trello page:
+For information on features, optimizations and bugs states, check out the AlertPal project Trello page:
 
-https://trello.com/b/ovPg9LEu
+https://trello.com/b/hVuWebqk
 
 ---
 
@@ -38,7 +38,7 @@ $ gulp watch
 
 Make a test case for the bug or feature you are introducing into the project. To add a test case follow these steps:
 
--   Go to the google sheets page https://docs.google.com/spreadsheets/d/1CI887TolHwWMO1AjMvw_HjqIk_CLL1DHMBXizVzD8_w/edit?usp=sharing
+-   Go to the google sheets page https://docs.google.com/spreadsheets/d/1VB7xi3SJvTnRU-rVsfm1tAqkSa3JV1bKZoLSU6ZtlYg/edit?usp=sharing
 -   Go under the section (sections highlighted in dark green) that you issue comes under
 -   Insert a new row and follow the column title to create the test case (i.e. Test Case name under test case column etc)
 -   Copy the drop down at the top of the page and insert it into the 'PASS/FAIL' column for the test case
@@ -63,7 +63,7 @@ $ npm run doc
 
 ### Test the Project:
 
-Use the test case document to test the project as a whole, follow this link to the google sheets test case document https://docs.google.com/spreadsheets/d/1CI887TolHwWMO1AjMvw_HjqIk_CLL1DHMBXizVzD8_w/edit?usp=sharing
+Use the test case document to test the project as a whole, follow this link to the google sheets test case document https://docs.google.com/spreadsheets/d/1VB7xi3SJvTnRU-rVsfm1tAqkSa3JV1bKZoLSU6ZtlYg/edit?usp=sharing
 
 Test under the following:
 
