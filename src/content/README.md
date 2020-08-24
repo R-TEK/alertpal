@@ -166,7 +166,7 @@ Read the contribution files for details on developing with the project. You can 
 
 https://github.com/R-TEK/alertpal/blob/master/CONTRIBUTING.md
 
-You can also contribute by issuing any bugs you have found or ideas for new features/optimizations to improve the component. You can do this by going to the [issues](https://github.com/R-TEK/alertpal/issues) page and posting your bug / feature. Once I have read the issue, I'll add it to a [Trello](https://trello.com/b/LYLtyuFd) road map. With the road map you can vote for items I have added if you like that feature too, and you can view what has been accepted/rejected, what I'm working on and what has been completed.
+You can also contribute by issuing any bugs you have found or ideas for new features/optimizations to improve the component. You can do this by going to the [issues](https://github.com/R-TEK/alertpal/issues) page and posting your bug / feature. Once I have read the issue, I'll add it to a [Trello](https://trello.com/b/hVuWebqk) road map. With the road map you can vote for items I have added if you like that feature too, and you can view what has been accepted/rejected, what I'm working on and what has been completed.
 
 ### License:
 
