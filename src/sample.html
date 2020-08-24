@@ -49,7 +49,7 @@
 					description: 'Do you accept?',
 					cancel: 'I do not Accept',
 					ok: 'I Accept',
-					callback: function () {
+					okCallback: function () {
 						console.log('CONFIRM CALLBACK');
 					}
 				};
@@ -66,7 +66,7 @@
 						'rules and rules and Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee Egfrew fe fee',
 					ok: 'Agree',
 					cancel: 'Disagree',
-					callback: function () {
+					okCallback: function () {
 						console.log('MODAL CALLBACK');
 						Alertpal.alert({ title: 'From modal' });
 					}
@@ -104,7 +104,8 @@
 			function warn() {
 				const config = {
 					message: 'Warning! Click for more info. THis is a warning message',
-					callback: makeAlert
+					callback: makeAlert,
+					timeout: 9999999999
 				};
 
 				Alertpal.message('warn', config);

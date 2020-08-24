@@ -110,11 +110,11 @@ Alertpal.alert = function (details) {
 		closeAlert();
 		details.cancelCallback();
 	};
-	details.callback === undefined
+	details.okCallback === undefined
 		? (ok.style.display = 'none')
 		: (ok.onclick = function () {
 				closeAlert();
-				details.callback();
+				details.okCallback();
 		  });
 
 	// Showing/Hiding elements
@@ -132,7 +132,7 @@ Alertpal.alert = function (details) {
  * @param {string} [details.description] - The description of the alert. String can also include HTML for formatting (Optional - default is no description)
  * @param {string} [details.cancel] - The text inside the cancel/return button (Optional - default is 'Return')
  * @param {string} [details.ok] - The text inside the the ok button (Option - default is 'OK')
- * @param {function} details.callback - The callback you want to be triggered when the ok button is clicked
+ * @param {function} details.okCallback - The callback you want to be triggered when the ok button is clicked
  *
  * @example
  * const config = {
@@ -140,24 +140,24 @@ Alertpal.alert = function (details) {
  *   description: 'Are you sure you want to delete this item?',
  *   cancel: 'No',
  *   ok: 'Yes',
- *   callback: deleteItemFunction
+ *   okCallback: deleteItemFunction
  * };
  *
  * Alertpal.confirm(config);
  */
 Alertpal.confirm = function (details) {
-	console.log(details.callback);
+	console.log(details.okCallback);
 	// Error handling, if no parameter is specified
 	if (details === undefined)
 		throw 'To use the confirm method, you must pass the "details" parameter';
 
-	// A callback needs to be provided, so if there isn't one I throw an error
-	if (details.callback === undefined || typeof details.callback != 'function')
-		throw 'The confirm method must pass "callback" parameter';
+	// A okCallback needs to be provided, so if there isn't one I throw an error
+	if (details.okCallback === undefined || typeof details.okCallback != 'function')
+		throw 'The confirm method must pass "okCallback" parameter';
 
 	// For confirm, since its similar to regular alert, I reuse that function
-	// The alert function is slightly modified to check for a callback
-	// If there is not callback then it knows that its not a confirm but an alert, vice versa
+	// The alert function is slightly modified to check for a okCallback
+	// If there is not okCallback then it knows that its not a confirm but an alert, vice versa
 	Alertpal.alert(details);
 };
 
@@ -249,7 +249,7 @@ Alertpal.message = function (type, details) {
  * @param {string} [details.description] - The description of the alert. String can also include HTML for formatting (Optional - default is no description)
  * @param {string} [details.cancel] - The text inside the cancel button (Optional - default is 'Return')
  * @param {string} [details.ok] - The text inside the the ok button (Option - default is 'OK')
- * @param {function} [details.callback] - The callback you want to be triggered when the ok button is clicked (Optional - default is no action)
+ * @param {function} [details.okCallback] - The callback you want to be triggered when the ok button is clicked (Optional - default is no action)
  *
  * @example
  * const config = {
@@ -257,7 +257,7 @@ Alertpal.message = function (type, details) {
  *   description: 'Rules...',
  *   cancel: 'Decline',
  *   ok: 'Accept',
- *   callback: acceptFunction
+ *   okCallback: acceptFunction
  * };
  *
  * Alertpal.modal(config);

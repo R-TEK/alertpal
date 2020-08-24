@@ -103,7 +103,7 @@
 		position: fixed;
 		top: 0;
 		right: 0;
-		z-index: 9999999999999999;
+		z-index: 999999999;
 	}
 
 	.ap_message {
@@ -119,7 +119,6 @@
 		overflow-wrap: break-word;
 		pointer-events: auto;
 		cursor: pointer;
-		z-index: 9999999999999999;
 		@include animation(rollDown ease 0.2s);
 		@include no-select;
 	}

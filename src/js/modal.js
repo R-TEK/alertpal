@@ -8,7 +8,7 @@
  * @param {string} [details.description] - The description of the alert. String can also include HTML for formatting (Optional - default is no description)
  * @param {string} [details.cancel] - The text inside the cancel button (Optional - default is 'Return')
  * @param {string} [details.ok] - The text inside the the ok button (Option - default is 'OK')
- * @param {function} [details.callback] - The callback you want to be triggered when the ok button is clicked (Optional - default is no action)
+ * @param {function} [details.okCallback] - The callback you want to be triggered when the ok button is clicked (Optional - default is no action)
  *
  * @example
  * const config = {
@@ -16,7 +16,7 @@
  *   description: 'Rules...',
  *   cancel: 'Decline',
  *   ok: 'Accept',
- *   callback: acceptFunction
+ *   okCallback: acceptFunction
  * };
  *
  * Alertpal.modal(config);

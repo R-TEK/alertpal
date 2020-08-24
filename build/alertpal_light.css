@@ -195,7 +195,7 @@
   position: fixed;
   top: 0;
   right: 0;
-  z-index: 9999999999999999; }
+  z-index: 999999999; }
 
 #alertpal .ap_message {
   position: relative;
@@ -210,7 +210,6 @@
   overflow-wrap: break-word;
   pointer-events: auto;
   cursor: pointer;
-  z-index: 9999999999999999;
   -webkit-animation: rollDown ease 0.2s;
   -moz-animation: rollDown ease 0.2s;
   -ms-animation: rollDown ease 0.2s;

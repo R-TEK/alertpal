@@ -41,11 +41,11 @@ Alertpal.alert = function (details) {
 		closeAlert();
 		details.cancelCallback();
 	};
-	details.callback === undefined
+	details.okCallback === undefined
 		? (ok.style.display = 'none')
 		: (ok.onclick = function () {
 				closeAlert();
-				details.callback();
+				details.okCallback();
 		  });
 
 	// Showing/Hiding elements

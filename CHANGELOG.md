@@ -6,6 +6,12 @@
 
 -   Added padding to messages and removed width to give them a dynamic width
 
+-   Added callback option to the cancel button on alerts, therefore I have split the parameters to be okCallback for ok button and cancelCallback for cancel button
+
+-   Made alert appear above messages
+
+-
+
 ### 2.0.0 - Rebuild
 
 -   Added more alert types than the existing (simple alert, confirm dialog). I added a modal, side messages for normal messages, success, warnings, errors
@@ -18,7 +24,7 @@
 
 -   Complete re-style
 
--   Added CSS file for a dark-mode alerts style:W
+-   Added CSS file for a dark-mode alerts style
 
 ---
 
