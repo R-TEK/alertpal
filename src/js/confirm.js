@@ -22,7 +22,6 @@
  * Alertpal.confirm(config);
  */
 Alertpal.confirm = function (details) {
-	console.log(details.okCallback);
 	// Error handling, if no parameter is specified
 	if (details === undefined)
 		throw 'To use the confirm method, you must pass the "details" parameter';
