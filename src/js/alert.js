@@ -7,12 +7,14 @@
  * @param {string} [details.title] - The title of the alert (Optional - default is 'Alert')
  * @param {string} [details.description] - The description of the alert. String can also include HTML for formatting (Optional - default is no description)
  * @param {string} [details.cancel] - The text inside the cancel button (Optional - default is 'Return')
+ * @param {function} [details.cancelCallback] - Callback function to trigger when the cancel button is pressed (Option - default is closing the alert box)
  *
  * @example
  * const config = {
  *   title: 'New alert',
  *   description: 'This is a alert pop up',
- *   cancel: 'Go back'
+ *   cancel: 'Go back',
+ * 	 cancelCallback: returnToPage
  * };
  *
  * Alertpal.alert(config);
@@ -35,6 +37,10 @@ Alertpal.alert = function (details) {
 	desc.innerHTML = details.description === undefined ? '' : details.description;
 	cancel.innerHTML = details.cancel === undefined ? 'Return' : details.cancel;
 	ok.innerHTML = details.ok === undefined ? 'OK' : details.ok;
+	cancel.onclick = function () {
+		closeAlert();
+		details.cancelCallback();
+	};
 	details.callback === undefined
 		? (ok.style.display = 'none')
 		: (ok.onclick = function () {

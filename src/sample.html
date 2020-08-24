@@ -3,7 +3,7 @@
 	<!--TESTING PURPOSES ONLY - NOT FOR PRODUCTION-->
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" type="text/css" href="../build/alertpal_dark.css" />
+		<link rel="stylesheet" type="text/css" href="../build/alertpal_light.css" />
 		<link
 			rel="stylesheet"
 			href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -27,10 +27,19 @@
 			function alert() {
 				const config = {
 					title: 'This is an alert',
-					description: 'Add optional description'
+					description: 'Add optional description',
+					cancelCallback: openMessage
 				};
 
 				Alertpal.alert(config);
+			}
+
+			function openMessage() {
+				const config = {
+					message: 'HEY HEY HEY'
+				};
+
+				Alertpal.message('normal', config);
 			}
 
 			// Confirm style
@@ -111,5 +120,4 @@
 			}
 		</script>
 	</body>
-	<html></html>
 </html>
