@@ -10,8 +10,6 @@
 
 -   Made alert appear above messages
 
--
-
 ### 2.0.0 - Rebuild
 
 -   Added more alert types than the existing (simple alert, confirm dialog). I added a modal, side messages for normal messages, success, warnings, errors

@@ -1,6 +1,6 @@
 {
 	"name": "@r-tek/alertpal",
-	"version": "2.0.0",
+	"version": "2.1.0",
 	"description": "AlertPal, a lightweight JavaScript alerts system, offering regular alerts, confirm dialog, and side messages/notifications.",
 	"author": "R-TEK",
 	"homepage": "https://r-tek.github.io/alertpal/",

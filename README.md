@@ -20,7 +20,7 @@
     <a href="https://www.npmjs.com/package/@r-tek/alertpal">
         <img src="https://badgen.net/npm/v/@r-tek/alertpal?color=7000c5" alt="version" />
     </a>
-    <a href="https://bundlephobia.com/result?p=@r-tek/alertpal@2.0.0">
+    <a href="https://bundlephobia.com/result?p=@r-tek/alertpal@2.1.0">
         <img src="https://badgen.net/bundlephobia/minzip/@r-tek/alertpal?color=158fcc" alt="minzip size" />
     </a>
     <a href="https://lgtm.com/projects/g/R-TEK/alertpal/context:javascript">
@@ -76,7 +76,7 @@
 
     ```html
     <script>
-    	type="text/javascript" src="https://cdn.jsdelivr.net/npm/@r-tek/alertpal@2.0.0/build/alertpal.min.js"
+    	type="text/javascript" src="https://cdn.jsdelivr.net/npm/@r-tek/alertpal@2.1.0/build/alertpal.min.js"
     </script>
     ```
 
@@ -86,7 +86,7 @@
     <link
     	rel="stylesheet"
     	type="text/css"
-    	href="https://cdn.jsdelivr.net/npm/@r-tek/alertpal@2.0.0/build/alertpal_light.min.css"
+    	href="https://cdn.jsdelivr.net/npm/@r-tek/alertpal@2.1.0/build/alertpal_light.min.css"
     />
     ```
 
@@ -96,7 +96,7 @@
     <link
     	rel="stylesheet"
     	type="text/css"
-    	href="https://cdn.jsdelivr.net/npm/@r-tek/alertpal@2.0.0/build/alertpal_dark.min.css"
+    	href="https://cdn.jsdelivr.net/npm/@r-tek/alertpal@2.1.0/build/alertpal_dark.min.css"
     />
     ```
 
